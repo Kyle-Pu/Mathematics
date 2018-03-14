@@ -1,4 +1,4 @@
-#List of ideas for more calculator programs
+# List of ideas for more calculator programs
 ## Geometry
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
