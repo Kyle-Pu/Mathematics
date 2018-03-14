@@ -1,4 +1,4 @@
 # Mathematics
-Various math formulas coded in Java for fun!
+Various math formulas coded in Java!
 
-All command line, calculator programs.
+Command line calculator programs.
