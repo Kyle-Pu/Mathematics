@@ -26,7 +26,7 @@ public class Heron{
 		double s = (double)(0.5*(a+b+c));
 		double answer = (double)Math.sqrt(s*(s-a)*(s-b)*(s-c));
 
-    //Print out zeroes calculated from the Heron's formula
+    //Print out area calculated from the Heron's formula
 		System.out.println("Answer: " + answer);
 
     //Close the scanner to prevent any leaks
