@@ -1,8 +1,8 @@
-List of ideas for more calculator programs:
-# Geometry
+#List of ideas for more calculator programs
+## Geometry
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
-# Calculus
+## Calculus
  - Extreme Value Theorem
  - Tangent line at a point
 
