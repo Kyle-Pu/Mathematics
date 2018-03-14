@@ -6,6 +6,8 @@ Feel free to contribute! Always happy to receive new contributions. Please remem
 ## Geometry
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
+- Distance
 ## Calculus
  - Extreme Value Theorem
  - Tangent line at a point
+
