@@ -11,3 +11,5 @@ The purpose of this app is to assist students with understanding math formulas. 
 
 ## Future Plan
 - Create a GUI and bring all this work together into an app!
+
+Hi Kyle
