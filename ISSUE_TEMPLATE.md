@@ -1,5 +1,8 @@
 # Issue Templates
 
+## A Few Tips
+- To link to a page, use square brackets followed by parentheses. In the square brackets, include the the text of the hyperlink to show, and place the URL in the parenthesis. "[Math.java] (https://github.com/Kyle-P/Mathematics)."
+
 ## Fixing a Bug
 Please fix [error occuring] in the [filename].java program. 
 - Description of the issue
@@ -14,7 +17,10 @@ If you are a first time contributor, welcome! Please read through the [basic gui
 as well as the [contribution guidelines](https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md) before getting started.
 
 
-Example of actual issue:
+### Real Example:
 "Create a program to find the slope of a line given two points on the line. The program should go under the [Algebra folder](https://github.com/Kyle-P/Mathematics/tree/master/Algebra). Title the program SlopeOfALine.java.
 
 Refer to the [quadratic formula code](https://github.com/Kyle-P/Mathematics/blob/master/Algebra/QuadraticFormula.java) to find out how to prompt users for data and use it accordingly."
+
+If you are a first time contributor, welcome! Please read through the [basic guidlines](https://github.com/Kyle-P/Mathematics/blob/master/README.md)
+as well as the [contribution guidelines](https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md) before getting started.
