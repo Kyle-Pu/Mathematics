@@ -1,5 +1,7 @@
 Feel free to add all ideas to https://github.com/Kyle-P/Mathematics/blob/master/Ideas!
 
+# All code should include comments!
+
 ## Adding New Programs
  - When adding a new program, please check the ideas file and remove the idea once it's been tackled.
  - Be sure to add the programs under the correct subject folders.
