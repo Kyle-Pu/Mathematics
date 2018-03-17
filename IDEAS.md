@@ -9,6 +9,7 @@ Feel free to contribute! Always happy to receive new contributions. Please remem
 - Distance
 - Angle measures (both interior and exterior) based on how many sides a shape has
 ## Calculus
+- Mean Value Theorem
  - Extreme Value Theorem
  - Tangent line at a point
  - Secant line at a point
