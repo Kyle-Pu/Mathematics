@@ -11,4 +11,4 @@ Create a program to find [what is calculated]. The program should go under the [
 Refer to [similar program] to find out how to prompt users for data and use it accordingly.
 
 If you are a first time contributor, welcome! Please read through the [basic guidlines](https://github.com/Kyle-P/Mathematics/blob/master/README.md)
-as well as the [contribution guidelines](https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md).
+as well as the [contribution guidelines](https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md) before getting started.
