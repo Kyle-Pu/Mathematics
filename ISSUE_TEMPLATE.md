@@ -1,6 +1,6 @@
 # Issue Templates
 
-## Fixing a bug
+## Fixing a Bug
 Please fix [error occuring] in the [filename].java program. 
 - Description of the issue
 - How it can be fixed
