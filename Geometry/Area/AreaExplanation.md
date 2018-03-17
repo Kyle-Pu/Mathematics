@@ -1,7 +1,7 @@
 # Basic Area Formulas
 
  Area is the quantity that expresses the extent of a two-dimensional figure or shape
-![alt tag](https://en.wikipedia.org/wiki/Area#/media/File:Area.svg)
+![various area formulas](https://i.imgur.com/EBJBPEB.gif)
 
 ## Circle
   The area of a circle is equal to pi multiplied by the square if its radius
