@@ -7,7 +7,9 @@ Feel free to contribute! Always happy to receive new contributions. Please remem
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
 - Distance
+- Angle measures (both interior and exterior) based on how many sides a shape has
 ## Calculus
  - Extreme Value Theorem
  - Tangent line at a point
+ - Secant line at a point
 
