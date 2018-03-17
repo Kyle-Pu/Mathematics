@@ -1,4 +1,4 @@
-#Issue Templates
+# Issue Templates
 
 ## Fixing a bug
 Please fix [error occuring] in the [filename].java program. 
