@@ -7,7 +7,7 @@ The purpose of this app is to assist students with understanding math formulas. 
 ## Contributing
 - Be sure to refer to [IDEAS.md](https://github.com/Kyle-P/Mathematics/blob/master/IDEAS.md). This is where all our ideas and available work will be hosted.
 - Check the [issues section](https://github.com/Kyle-P/Mathematics/issues) to help fix bugs and manage the project.
-- https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md
+- Reading this file is a requirement in order to begin contributing: https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md.
 
 ## Future Plan
 - Create a GUI and bring all this work together into an app!
