@@ -13,4 +13,5 @@ The purpose of this app is to assist students with understanding math formulas. 
 - Reading this file is a requirement in order to begin contributing: https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md.
 
 ## Future Plan
-- Create a GUI and bring all this work together into an app!
+- Create a GUI
+- Bring all this work together into a desktop, online, and mobile app!
