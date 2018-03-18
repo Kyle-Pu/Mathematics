@@ -1,5 +1,7 @@
 # Issue Templates
 
+PLEASE FIND YOUR APPROPRIATE ISSUE AND USE THAT TEMPLATE
+
 ## A Few Tips
 - To link to a page, use square brackets followed by parentheses. In the square brackets, include the the text of the hyperlink to show, and place the URL in the parenthesis. "[Math.java] (https://github.com/Kyle-P/Mathematics)." To make this an actual hyperlink, remove the space between the closing square bracket and the left parentheses.
 
