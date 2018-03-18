@@ -1,5 +1,7 @@
 # List of Ideas For More Calculator Programs
 Feel free to contribute! Always happy to receive new contributions. Please remember to place files under the correct folder to specify which subject and topic you are tackling! Or, if you would like to contribute some ideas for new programs, feel free to add a topic!
+
+After completing the program, please be sure to remove the appropriate item from the list below!
 ## Algebra
 - Find the intercepts of a line
 ## Geometry
