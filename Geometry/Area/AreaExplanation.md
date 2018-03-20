@@ -4,8 +4,7 @@
 ![various area formulas](https://i.imgur.com/EBJBPEB.gif)
 
 ## Circle
-  The area of a circle is equal to pi multiplied by the square if its radius
+  Circle Area = pi*r^2
 ## Rectangle
-  The area of a rectangle is equal to its width multiplied by its height
-
+  rectangle Area = w*h
 For more information visit: https://en.wikipedia.org/wiki/Area
