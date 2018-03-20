@@ -23,4 +23,5 @@ After completing the program, please be sure to remove the appropriate item from
  - Extreme Value Theorem
  - Tangent line at a point
  - Secant line at a point
+ - Riemann Sums
 
