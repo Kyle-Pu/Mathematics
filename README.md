@@ -2,15 +2,16 @@
 Various command line math formulas/calculators coded in Java!
 
 [![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
-Feel free to subscribe to this repo on CodeTriage!
+Feel free to subscribe to our contribution stream on CodeTriage!
 
 ## Details
 The purpose of this app is to assist students with understanding math formulas. Each calculator computes a specific type of calculation for the user and also explains why the answer is what it is.
 
 ## Contributing
-- Be sure to refer to [IDEAS.md](https://github.com/Kyle-P/Mathematics/blob/master/IDEAS.md). This is where all our ideas and available work will be hosted.
+- Be sure to refer to [IDEAS.md](https://github.com/Kyle-P/Mathematics/blob/master/IDEAS.md). This is where all our ideas and available work will be hosted. This is **where most of the available coding tasks will be.** Other programming tasks may involve the GUI, but most other opportunities can be found in the issues section of this repository.
 - Check the [issues section](https://github.com/Kyle-P/Mathematics/issues) to help fix bugs and manage the project.
-- Reading this file is a requirement in order to begin contributing: https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md.
+- Reading this file is a requirement in order to begin contributing: https://github.com/Kyle-P/Mathematics/blob/master/CONTRIBUTING.md. Please pay special attention to how to format your pull requests, issues, etc.
 
 ## Future Plan
-- Create a GUI and bring all this work together into an app!
+- Create a GUI
+- Bring all this work together into a desktop, online, and mobile app!

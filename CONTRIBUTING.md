@@ -1,6 +1,9 @@
 Feel free to add all ideas to https://github.com/Kyle-P/Mathematics/blob/master/Ideas!
 
-# All code should include comments!
+## Best Practices
+ - All code should be commented
+ - Be sure to test that the user inputs the correct data type. If not, display a message to explain what type of data to use, and allow them to restart the program
+ - Include a new line at the end of each program
 
 ## Adding New Programs
  - When adding a new program, please check the ideas file and remove the idea once it's been tackled.
