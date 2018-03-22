@@ -15,17 +15,13 @@ public class CalcHandler{
 		}
 
 		public void update(){
+      //get mouse info!
       PointerInfo a = MouseInfo.getPointerInfo();
       Point b = a.getLocation();
       int mouseX = (int) (b.getX());
       int mouseY = (int) (b.getY());
       //the actual code that actually does stuff!
 
-      for(JButton j: getCalcFrame().getNumpad()){
-        if(j.getModel().isPressed()){
-          System.out.println(j.getText());
-        }
-      }
 			//Paint canvas
 			getCalcFrame().getCalcPanel().repaint();
 		}
