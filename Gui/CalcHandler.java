@@ -29,7 +29,7 @@ public class CalcHandler{
       int mouseX = (int) (b.getX());
       int mouseY = (int) (b.getY());
       //the actual code that actually does stuff!
-
+			
 			//Paint canvas
 			getCalcFrame().getCalcPanel().repaint();
 		}
