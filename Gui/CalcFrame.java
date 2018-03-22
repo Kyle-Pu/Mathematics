@@ -7,7 +7,7 @@ public  class CalcFrame extends JFrame{
 
   private CalcHandler handler;
   private CalcPanel panel;
-  public ArrayList<JButton> numpad;
+  
   public JTextField inputBox;
   public CalcFrame(CalcHandler handler){
 
