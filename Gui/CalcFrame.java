@@ -7,7 +7,7 @@ public  class CalcFrame extends JFrame{
 
   private CalcHandler handler;
   private CalcPanel panel;
-  
+
   public JTextField inputBox;
   public CalcFrame(CalcHandler handler){
 
@@ -16,13 +16,7 @@ public  class CalcFrame extends JFrame{
     this.add((panel = new CalcPanel(handler)));
 
     inputBox = new JTextField(20);
-    Action action = new AbstractAction(){
-      @Override
-      public void actionPerformed(ActionEvent e){
-        System.out.println(inputBox.getText());
-      }
-    };
-    inputBox.addActionListener(action);
+
     panel.add(inputBox);
     this.setVisible(true);
     this.handler = handler;
@@ -33,5 +27,11 @@ public  class CalcFrame extends JFrame{
   }
   public JTextField getInputBox(){
     return inputBox;
+  }
+  public String getInput(){
+    return inputBox.getText();
+  }
+  public void setInput(String s){
+    inputBox.setText(s);
   }
 }
