@@ -49,7 +49,7 @@ The program will first ask you for the coordinates for the first point, then the
 
 The program then calculates the slope using the formula. If the slope is undefined (x2 - x1 = 0), the program will tell you that it is an Infinity Slope or an Undefined Slope. Otherwise, the program will print out the numerical value for the slope.
 
-## A Note for Caluclus Students:
+## A Note for Calculus Students:
 
 This particular program only covers the slope of a line and what it means in the context of algebra. A program for slope in the context of calculus may be added soon.
 
