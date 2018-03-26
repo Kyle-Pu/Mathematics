@@ -4,7 +4,6 @@ Feel free to contribute! Always happy to receive new contributions. Please remem
 After completing the program, please be sure to remove the appropriate item from the list below!
 ## Algebra
 - Find the intercepts of a line
-- Find the factors of a number
 - Prime Factorization
 ## Geometry
 - Area of squares, triangles, rectangles, etc.
