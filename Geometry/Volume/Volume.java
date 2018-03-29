@@ -41,18 +41,24 @@ public class Volume{
 
 	public static void cuboid(){
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter the length, breadth, height of the Cuboid: ");
+		System.out.println("Enter the Length of the Cuboid:  ");
 		double length  = scan.nextDouble();
+		
+		System.out.println("Enter the Breadth of the Cuboid: ");
 		double breadth = scan.nextDouble();
-		double height  = scan.nextDouble();
+
+		System.out.println("Enter the Height of the Cuboid:  ");
+		double height  = scan.nextDouble();	
 
 		System.out.println("Volume of Cuboid is : " + length * breadth * height);
 	}
 
 	public static void cylinder(){
 		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter the Radius and Height of the Cylinder: ");
+		System.out.println("Enter the Radius of the Cylinder: ");
 		double radius = scan.nextDouble();
+
+		System.out.println("Enter the Height of the Cylinder: ");
 		double height = scan.nextDouble();
 
 		System.out.println("Volume of Cylinder is : " + Math.PI * radius * radius * height);
