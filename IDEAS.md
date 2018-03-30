@@ -5,6 +5,7 @@ After completing the program, please be sure to remove the appropriate item from
 ## Algebra
 - Find the intercepts of a line
 - Prime Factorization
+- Findind the nearest integer to the square root of a number
 ## Geometry
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
@@ -26,4 +27,6 @@ After completing the program, please be sure to remove the appropriate item from
  - Tangent line at a point
  - Secant line at a point
  - Riemann Sums
+ - Integration
+ - Differentiation
 
