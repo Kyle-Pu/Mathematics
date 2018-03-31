@@ -15,7 +15,7 @@ class Factors {
   
     System.out.println("Factors of " + numToFactor + " are: ");
 
-    //Algorithm to check for factors (starting from 1 to the inputted number, if 'i' divides into the numToFactor without a remainder, it is a factor of numToFactor)
+    //Algorithm to check for factors (starting from 1 to the inputed number, if 'i' divides into the numToFactor without a remainder, it is a factor of numToFactor)
     for(int i = 1; i <= numToFactor; i++){
       if(numToFactor % i == 0){
         System.out.print(i + " ");
