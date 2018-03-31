@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Main {
+class Factors {
   public static void main(String[] args) {
     
     System.out.println("Welcome to the factors calculator!");
