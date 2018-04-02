@@ -49,7 +49,8 @@ public class PythagoreanCalculator {
 
         } catch (InputMismatchException ex) {
             System.err.println("Please start over entering numbers only.");
-            System.exit(0);
+            String[] arr = {""};
+            main(arr);
         }
     }
 }
