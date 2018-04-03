@@ -11,8 +11,7 @@ After completing the program, please be sure to remove the appropriate item from
 - Volume of spheres, cylinders, etc.
 - Distance
 - Angle measures (both interior and exterior) based on how many sides a shape has
-- Pythagorean Theorem
- - Pythagorean Triples
+- Pythagorean Triples
 - Find missing sides of special triangles
 - Similar triangles
 ## Trigonometry
