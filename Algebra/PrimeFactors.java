@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 class PrimeFactors {
@@ -37,7 +36,8 @@ class PrimeFactors {
 			scan.close();
 			
 		} catch (InputMismatchException ex) {
-			System.err.println("Please provide only numbers (no text). Restart the program and try again!");
+			System.out.println();
+			System.err.println("Please provide only numbers (no text). Also, please ensure your number is within the range of -2,147,483,648 to 2,147,483,647Restart the program and try again!");
 			main(new String[0]);
 		}
 
