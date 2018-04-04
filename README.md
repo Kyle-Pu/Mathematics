@@ -2,12 +2,11 @@
 Various command line math formulas/calculators coded in Java!
 
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
+[![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
+Feel free to subscribe to our contribution stream on CodeTriage!
 
 ## Continuous Integration
 [![Build Status](https://travis-ci.org/Kyle-P/Mathematics.svg?branch=master)](https://travis-ci.org/Kyle-P/Mathematics)
-
-[![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
-Feel free to subscribe to our contribution stream on CodeTriage!
 
 ## Details
 The purpose of this app is to assist students with understanding math formulas. Each calculator computes a specific type of calculation for the user and also explains why the answer is what it is.
