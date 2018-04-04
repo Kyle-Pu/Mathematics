@@ -2,6 +2,7 @@
 Various command line math formulas/calculators coded in Java!
 
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
+
 [![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
 Feel free to subscribe to our contribution stream on CodeTriage!
 
