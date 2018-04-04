@@ -20,6 +20,11 @@ class PrimeFactors {
 			 * divides into the numToFactor without a remainder and isPrime returns true, 'i' is a prime factor of
 			 * numToFactor)
 			 */
+
+			if (isPrime(numToFactor)){
+				System.out.println("1*" + numToFactor);
+				System.exit(0);
+			}
 			for (int i = 2; i <= numToFactor; i++) {
 				if ((numToFactor % i == 0) && (isPrime(i))) {
 					//Keep dividing numToFactoe by i until it is divisible
