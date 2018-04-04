@@ -1,4 +1,3 @@
-package Mathematics;
 
 import java.util.*;
 
@@ -22,9 +21,16 @@ class PrimeFactors {
 			 * divides into the numToFactor without a remainder and isPrime returns true, 'i' is a prime factor of
 			 * numToFactor)
 			 */
-			for (int i = 1; i <= numToFactor; i++) {
+			for (int i = 2; i <= numToFactor; i++) {
 				if ((numToFactor % i == 0) && (isPrime(i))) {
-					System.out.print(i + " ");
+					//Keep dividing numToFactoe by i until it is divisible
+					//and print i as prime factor each time it divides numToFactor 
+					while(numToFactor % i == 0 ){
+						numToFactor /= i;
+						System.out.print(i);
+						if(numToFactor != 1)
+							System.out.print("*");
+					}
 				}
 			}
 
