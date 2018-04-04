@@ -5,7 +5,6 @@ Various command line math formulas/calculators coded in Java!
 
 ## Continuous Integration
 [![Build Status](https://travis-ci.org/Kyle-P/Mathematics.svg?branch=master)](https://travis-ci.org/Kyle-P/Mathematics)
-!https://travis-ci.org/Kyle-P/Mathematics.svg?branch=Kyle-P-travis!:https://travis-ci.org/Kyle-P/Mathematics
 
 [![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
 Feel free to subscribe to our contribution stream on CodeTriage!
