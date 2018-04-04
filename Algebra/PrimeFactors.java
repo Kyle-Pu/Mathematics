@@ -1,5 +1,3 @@
-package Mathematics;
-
 import java.util.*;
 
 class PrimeFactors {
@@ -22,16 +20,24 @@ class PrimeFactors {
 			 * divides into the numToFactor without a remainder and isPrime returns true, 'i' is a prime factor of
 			 * numToFactor)
 			 */
-			for (int i = 1; i <= numToFactor; i++) {
+			for (int i = 2; i <= numToFactor; i++) {
 				if ((numToFactor % i == 0) && (isPrime(i))) {
-					System.out.print(i + " ");
+					//Keep dividing numToFactoe by i until it is divisible
+					//and print i as prime factor each time it divides numToFactor 
+					while(numToFactor % i == 0 ){
+						numToFactor /= i;
+						System.out.print(i);
+						if(numToFactor != 1)
+							System.out.print("*");
+					}
 				}
 			}
 
 			scan.close();
 			
 		} catch (InputMismatchException ex) {
-			System.err.println("Please provide only numbers (no text). Restart the program and try again!");
+			System.out.println();
+			System.err.println("Please provide only numbers (no text). Also, please ensure your number is within the range of -2,147,483,648 to 2,147,483,647Restart the program and try again!");
 			main(new String[0]);
 		}
 
