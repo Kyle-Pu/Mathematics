@@ -1,7 +1,7 @@
 package Calculus.Limits;
 
 
-//calculate the limit of a polyinomial
+//calculate the limit of a Polynomial
 
 import java.util.Scanner;
 
@@ -33,8 +33,10 @@ public class Polynomial {
                 c += Integer.parseInt(split[2]);
                 x += Integer.parseInt(split[3]);
 
+                //calculate the limit (basic math)
                 int limitAsXApproachesNumber = ((a * (x * x)) + (b * x)) + c;
                 System.out.println("The limit is: " + limitAsXApproachesNumber);
+
             } else if (last_input.equalsIgnoreCase("2")) {
                 LimitAtInfinity();
             }
@@ -46,7 +48,7 @@ public class Polynomial {
     }
 
     public static void LimitAtInfinity() {
-        //this method finds the limit when x is a number (not infinity)
+        //this method finds the limit when x approaches infinity
         try {
 
 
