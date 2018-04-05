@@ -1,4 +1,4 @@
-package Mathematics;
+// @author Charaf-B: https://github.com/Charaf-B
 
 //Calculate the limit of a Polynomial
 
