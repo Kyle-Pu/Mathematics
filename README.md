@@ -6,6 +6,9 @@ Various command line math formulas/calculators coded in Java!
 [![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
 Feel free to subscribe to our contribution stream on CodeTriage!
 
+## Continuous Integration
+[![Build Status](https://travis-ci.org/Kyle-P/Mathematics.svg?branch=master)](https://travis-ci.org/Kyle-P/Mathematics)
+
 ## Details
 The purpose of this app is to assist students with understanding math formulas. Each calculator computes a specific type of calculation for the user and also explains why the answer is what it is.
 
