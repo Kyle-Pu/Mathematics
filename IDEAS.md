@@ -10,6 +10,7 @@ After completing the program, please be sure to remove the appropriate item from
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
 - Distance
+- Distance between 3-dimensional coordinates
 - Angle measures (both interior and exterior) based on how many sides a shape has
 - Pythagorean Triples
 - Find missing sides of special triangles
