@@ -50,14 +50,16 @@ public class GraphHandler {
 					coordinates.add(new Coordinate(i, eval(revisedFormula))); // Add a new coordinate to the coordinates ArrayList with data points
 			}
 		
-		scale(leftBound, rightBound);
+		//scale(leftBound, rightBound);
 		
 		}
 
+	/*
 	public void scale(double leftBound, double rightBound) {
 		getGraphFrame().getGraphPanel().setXScale(leftBound - 20);
 		getGraphFrame().getGraphPanel().setYScale(rightBound + 20);
 	}
+	*/
 	
 	//The thread will run this update function which repaints the GraphPanel
 	public void update() {
