@@ -1,5 +1,3 @@
-package GraphingCalculator;
-
 import java.awt.*;
 import javax.swing.*;
 
