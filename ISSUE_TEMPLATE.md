@@ -1,4 +1,7 @@
 # Issue Templates
+-----------------------------
+
+How to Create an Issue
 
 PLEASE FIND YOUR APPROPRIATE ISSUE AND USE THAT TEMPLATE
 
