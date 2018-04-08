@@ -5,8 +5,8 @@ import javax.swing.*;
 public  class GraphPanel extends JPanel{
 
 		private GraphHandler handler;
-		private double scaleX = 50; //Allows you to fit more points on screen 
-		private double scaleY = 10;
+		private double xScale = 50; //Allows you to fit more points on screen 
+		private double yScale = 10; //How many intervals of y there are
 		private int xOffset = 500; //Controls where center of graph should be
 		private int yOffset = 500; //This would be halfway because 500 pix / 1000 pix
 		
@@ -14,6 +14,14 @@ public  class GraphPanel extends JPanel{
 			this.handler = handler;
 		}
 
+		public void setXScale(double scale) {
+			this.xScale = scale;
+		}
+		
+		public void setYScale(double scale) {
+			this.yScale = scale;
+		}
+		
 		@Override
 		//How we actually draw the points and lines
 		public void paintComponent(Graphics g){
@@ -35,11 +43,11 @@ public  class GraphPanel extends JPanel{
 			g2d.setColor(Color.BLUE); //Set paint color to blue
 			
 			for(Coordinate c: handler.getCoordinates()){  //For each coordinate in the coordinate list from the handler
-				double y = yOffset - (scaleY * c.getY()); //Figure out where to put it on screen based on scale, offset and actual coordinate
-				g2d.fillRect((int)(c.getX()*scaleX)+xOffset, (int)y, 5, 5);  //Draw a tiny rectangle for each point, w = 5, h = 5
+				double y = yOffset - (yScale * c.getY()); //Figure out where to put it on screen based on scale, offset and actual coordinate
+				g2d.fillRect((int)(c.getX() * xScale)+xOffset, (int)y, 5, 5);  //Draw a tiny rectangle for each point, w = 5, h = 5
 			}
 			
-			g2d.drawLine(xOffset,this.getHeight(), xOffset, 0);  //Draw the x and y axis
+			g2d.drawLine(xOffset, this.getHeight(), xOffset, 0);  //Draw the x and y axis
 			g2d.drawLine(0, yOffset, this.getWidth(), yOffset);
 
 		}
