@@ -1,5 +1,3 @@
-package GraphingCalculator;
-
 public class GraphThread extends Thread {
 
 	private GraphHandler handler;
