@@ -11,8 +11,8 @@ public class GraphHandler {
 	//Construct objects, start the thread, run the graphing function
 	public GraphHandler() {
 		coordinates = new ArrayList<Coordinate>();
-		function();
 		frame = new GraphFrame(this);
+		function();
 		((Thread) (thread = new GraphThread(this))).start();
 	}
 
@@ -42,15 +42,23 @@ public class GraphHandler {
 		System.out.print("Step of your function (the increments at which the function is evaluated at: ");
 		double step = scan.nextDouble();
 		scan.close();
-
+		
 		//Algorithm to calculate coordinates
 		for (double i = leftBound; i <= rightBound; i += step) {
 					String input = Double.toString(i); //Take the input at the given point based on left bound, right bound, and step of the function
 					revisedFormula = formula.replaceAll("x", input); //Take the original formula and replace all occurrences of 'x' with the input
 					coordinates.add(new Coordinate(i, eval(revisedFormula))); // Add a new coordinate to the coordinates ArrayList with data points
 			}
+		
+		scale(leftBound, rightBound);
+		
 		}
 
+	public void scale(double leftBound, double rightBound) {
+		getGraphFrame().getGraphPanel().setXScale(leftBound - 20);
+		getGraphFrame().getGraphPanel().setYScale(rightBound + 20);
+	}
+	
 	//The thread will run this update function which repaints the GraphPanel
 	public void update() {
 		// Paint canvas
