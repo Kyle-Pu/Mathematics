@@ -170,7 +170,7 @@ public class InterceptsOfALine {
 				System.out.println("\nPlease input the value of a: ");
 				double a = scan.nextDouble();
 
-				System.out.printf("\nThe equation of the line you entered is: y = %f",a);
+				System.out.printf("\nThe equation of the line you entered is: x = %f",a);
 
 				if (a == 0)
 					System.out.println("\nThe line is along the y-axis.");
