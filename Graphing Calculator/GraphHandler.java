@@ -1,5 +1,3 @@
-package GraphingCalculator;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
