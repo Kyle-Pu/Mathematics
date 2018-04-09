@@ -15,7 +15,6 @@ After completing the program, please be sure to remove the appropriate item from
 - Find missing sides of special triangles
 - Similar triangles
 ## Trigonometry
-- Basic functions calculator (sine, cosine, tangent, etc.)
 - Inverse functions calculator (cosecant, secant, cotangent, etc.)
 - Law of Sines
 - Law of Cosines
