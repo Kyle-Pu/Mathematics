@@ -1,4 +1,5 @@
-Feel free to add all ideas to https://github.com/Kyle-P/Mathematics/blob/master/Ideas!
+## Welcome
+Hi! Thanks for choosing to contribute to our math repo here on GitHub! Feel free to add all ideas you may have to https://github.com/Kyle-P/Mathematics/blob/master/Ideas.
 
 ## Best Practices
  - All code should be commented
@@ -8,6 +9,7 @@ Feel free to add all ideas to https://github.com/Kyle-P/Mathematics/blob/master/
 ## Adding New Programs
  - When adding a new program, please check the ideas file and remove the idea once it's been tackled.
  - Be sure to add the programs under the correct subject folders.
+ - EACH file and explanation file should be in its own folder (for example, all code, explanation files, etc for a certain topic such as the slope of a line should go under Alegbra in a folder named "Slope").
  - Make sure your code is well-commented. This ensures that collaborators will be able to easily help with bugs or revisions.
  
 ## Explanation Files for Programs

@@ -1,5 +1,3 @@
-package GraphingCalculator;
-
 public class Coordinate {
 
 	private double x;
