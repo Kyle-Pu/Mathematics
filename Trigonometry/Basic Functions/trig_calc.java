@@ -202,7 +202,7 @@ public class trig_calc {
 
         // get the arcsine of the angle
         double asineValue = Math.asin(Double.parseDouble(s));
-        System.out.println("arcsine of " + s + " is " + asineValue);
+        System.out.println("Arcsine of " + s + " is " + asineValue + " radians");
         return asineValue;
     }
 
@@ -222,7 +222,7 @@ public class trig_calc {
 
         // get the arccos of the user input
         double acosineValue = Math.acos(Double.parseDouble(s));
-        System.out.println("arccos of " + s + " is " + acosineValue);
+        System.out.println("Arccosine of " + s + " is " + acosineValue + " radians");
         return acosineValue;
     }
 
@@ -242,7 +242,7 @@ public class trig_calc {
 
          // get the arctan of the user input
         double atanValue = Math.atan(Double.parseDouble(s));
-        System.out.println("arctan of " + s + " is " + atanValue);
+        System.out.println("Arctangent of " + s + " is " + atanValue + " radians");
         return atanValue;
     }
 }
