@@ -132,10 +132,7 @@ public class trig_calc {
 
         // convert the string input to double
         double value = Double.parseDouble(s);
-        // (convert the value to radians) this is the old code, there is no need for this since
-        // we're working with numbers not degrees. .
-       // double valueRadians = Math.toRadians(value);
-
+        
         // get the sinh of the angle
         double sinehValue = Math.sinh(value);
         System.out.println("sinh of " + s + " is " + sinehValue);
@@ -158,9 +155,7 @@ public class trig_calc {
 
         // convert the string input to double
         double value = Double.parseDouble(input);
-        // convert the value to radians
-        //double valueRadians = Math.toRadians(value); commented to fix the issue. explained in sineh
-
+     
         // get the cosh of the angle
         double cosinehValue = Math.cosh(value);
         System.out.println("cosh of " + input + " is " + cosinehValue);
@@ -184,9 +179,7 @@ public class trig_calc {
 
         // convert the string input to double
         double value = Double.parseDouble(input);
-        // convert the value to radians
-        //double valueRadians = Math.toRadians(value);  commented to fix the issue. explained in sineh
-
+       
         // get the tanh of the angle
         double tanhValue = Math.tanh(value);
         System.out.println("tanh of " + input + " is " + tanhValue);
