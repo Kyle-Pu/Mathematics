@@ -6,7 +6,7 @@ Feel free to subscribe to our contribution stream on CodeTriage!
 
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
 
-## Travis-CI
+## Travis-CI 
 [![Build Status](https://travis-ci.org/Kyle-P/Mathematics.svg?branch=master)](https://travis-ci.org/Kyle-P/Mathematics)
 (Results from the most recent buid)
 
