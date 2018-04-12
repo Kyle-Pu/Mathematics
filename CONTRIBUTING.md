@@ -1,5 +1,5 @@
 ## Welcome
-Hi! Thanks for choosing to contribute to this mathematics repository here on GitHub! Feel free to add all ideas you may have to https://github.com/Kyle-P/Mathematics/blob/master/Ideas.
+Hi! Thanks for choosing to contribute to our math repository here on GitHub! Feel free to add all ideas you may have to https://github.com/Kyle-P/Mathematics/blob/master/Ideas.
 
 ## Best Practices
  - All code should be properly commented
