@@ -9,9 +9,9 @@ public class inverse {
 		
 		//Prompt user for which trigonometry function
 		System.out.println("What trigonometry function do you want to use? :"
-				+ "\n 1 Cosec"
-				+ "\n 2 Sec"
-				+ "\n 3 Cot\n");
+				+ "\n 1 Cosecant"
+				+ "\n 2 Secant"
+				+ "\n 3 Cotangent\n");
 		
 		int userChoice = scan.nextInt();
 		
@@ -109,31 +109,3 @@ public static double cot(){
 			return cotValue;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
