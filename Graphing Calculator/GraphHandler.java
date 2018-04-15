@@ -22,6 +22,8 @@ public class GraphHandler {
 		System.out.println(
 				"Welcome to our graphing calcalculator!");
 		System.out.println();
+		System.out.println("Diections: When multiplying terms, always use the multiplication (*). Ex: 2x^2 should be 2*x^2");
+		System.out.println();
 		System.out.print("Please insert your equation in terms of x. Separate each term with a space (Ex: x^2 + 2*x + 3  \n You MUST include all signs (2x should be 2*x)): \ny = ");
 
 		Scanner scan = new Scanner(System.in);
