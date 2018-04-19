@@ -7,7 +7,7 @@ class nearInt {
    Scanner scan = new Scanner(System.in);
    //Prompt user for number to find square root of and store the data
    System.out.println("Please input a number to find square root of...");
-   double numToSrt = scan.nextInt();
+   double numToSrt = Double.parseDouble(scan.next());
 	//FInd the nearest Integer of the Square root by rounding up
    double sqRt = Math.sqrt(numToSrt);
 
