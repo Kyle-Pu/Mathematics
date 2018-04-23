@@ -29,7 +29,7 @@ class nearInt {
         expDone = true;
 	      
 		System.out.println();
-		System.out.println("First we calculate square root of the number and after that we round up the number to get the nearest Integer!");
+		System.out.println("First we calculate square root of the number and after that we round the number to get the nearest Integer!");
       }else{
         System.out.println("Sorry, try again (yes/no)...");
 	  }
