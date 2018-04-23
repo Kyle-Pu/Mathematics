@@ -6,12 +6,13 @@ public class GCD {
   try {
    Scanner scan = new Scanner(System.in);
    //Prompt user for number to find GCD  of and store the data
-   System.out.println("Please input integers to GCD of...");
+   System.out.println("Please input integers to GCD of (enter two numbers with a space to separate)");
    int a = scan.nextInt();
    int b = scan.nextInt();
-   System.out.println("The GCD of a: " + a + " and b: " + b + " is=" + new GCD().gcd(a, b));
+   System.out.println("The GCD of your first number: " + a + " and your second number: " + b + " is = " + new GCD().gcd(a, b));
   } catch (InputMismatchException ex) {
-   System.err.println("Please provide only numbers (no text). Restarting the program, Please try again!");
+   System.err.println("Please provide only numbers (no text). Restarting the program, please try again!");
+   System.out.println();
    main(new String[0]);
   }
  }
