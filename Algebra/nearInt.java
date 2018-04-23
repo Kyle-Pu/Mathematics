@@ -2,15 +2,17 @@ import java.util.*;
 class nearInt {
 
  public static void main(String[] s) {
-  System.out.println("Welcome to the Square root calculator!");
+  System.out.println("Welcome to the Square Root Calculator!");
   try {
    Scanner scan = new Scanner(System.in);
+   System.out.println();
    //Prompt user for number to find square root of and store the data
    System.out.println("Please input a number to find square root of...");
    double numToSrt = Double.parseDouble(scan.next());
 	//FInd the nearest Integer of the Square root by rounding up
    double sqRt = Math.sqrt(numToSrt);
-
+   
+   System.out.println();
    System.out.println("Square root of " + numToSrt + " is: " + sqRt);
    System.out.println("Nearest integer of the square root is: " + Math.round(sqRt));
    System.out.println("....");
@@ -25,7 +27,9 @@ class nearInt {
        expDone = true;
       }else if (you.equalsIgnoreCase("yes")){
         expDone = true;
-		System.out.println("First we calculate square root of the number and after that we round up the number to get the nearest Integers;");
+	      
+		System.out.println();
+		System.out.println("First we calculate square root of the number and after that we round up the number to get the nearest Integer!");
       }else{
         System.out.println("Sorry, try again (yes/no)...");
 	  }
