@@ -11,17 +11,25 @@ import javax.swing.JComponent;
 public class AreaSquareComponent extends JComponent{
 	private double squareSide;
 	
-	private int componentHeight = this.getHeight();
-	private int componentWidth = this.getWidth();
-	private int halfHeight = componentHeight/2;
-	private int halfWidth = componentWidth/2;
-	private int halfPointTwoWidth = (int) (componentWidth/(2.5));	
-	private int quarterHeight = componentHeight/4;
-	private int fifthHeight = componentHeight/5;
+	private int componentHeight;
+	private int componentWidth;
+	private int halfHeight;
+	private int halfWidth;
+	private int halfPointTwoWidth;	
+	private int quarterHeight;
+	private int fifthHeight;
 
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
+		componentHeight = this.getHeight();
+		componentWidth = this.getWidth();
+		halfHeight = componentHeight/2;
+		halfWidth = componentWidth/2;
+		halfPointTwoWidth = (int) (componentWidth/(2.5));	
+		quarterHeight = componentHeight/4;
+		fifthHeight = componentHeight/5;
+		
 		g.setColor(Color.BLACK);
 		drawShape(g);
 		g.setColor(Color.RED);
@@ -47,8 +55,8 @@ public class AreaSquareComponent extends JComponent{
 		g.drawString("Area = " + AreaFormulas.square(squareSide), halfWidth, halfHeight);
 	}
 	
-	public void setSquareSide(double side) {
-		this.squareSide = side;
+	public void setSquareSide(double squareSide) {
+		this.squareSide = squareSide;
 	}
 
 

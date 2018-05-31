@@ -12,18 +12,28 @@ public class AreaTriangleComponent extends JComponent{
 	private double triangleLength;
 	private double triangleHeight;
 	
-	private int componentHeight = this.getHeight();
-	private int componentWidth = this.getWidth();
-	private int halfHeight = componentHeight/2;
-	private int halfWidth = componentWidth/2;
-	private int quarterHeight = componentHeight/4;
-	private int quarterWidth = componentWidth/4;	
-	private int threeQuarterWidth = 3*quarterWidth;
-	private int threeQuarterHeight = 3*quarterHeight;
-	private int fifthHeight = componentHeight/5;
+	private int componentHeight;
+	private int componentWidth;
+	private int halfHeight;
+	private int halfWidth;
+	private int quarterHeight;
+	private int quarterWidth;	
+	private int threeQuarterWidth;
+	private int threeQuarterHeight;
+	private int fifthHeight;
 
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
+		
+		componentHeight = this.getHeight();
+		componentWidth = this.getWidth();
+		halfHeight = componentHeight/2;
+		halfWidth = componentWidth/2;
+		quarterHeight = componentHeight/4;
+		quarterWidth = componentWidth/4;	
+		threeQuarterWidth = 3*quarterWidth;
+		threeQuarterHeight = 3*quarterHeight;
+		fifthHeight = componentHeight/5;
 
 		g.setColor(Color.BLACK);
 		drawShape(g);

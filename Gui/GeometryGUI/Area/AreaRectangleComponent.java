@@ -12,19 +12,28 @@ public class AreaRectangleComponent extends JComponent{
 	private double rectangleWidth;
 	private double rectangleHeight;
 
-	private int componentHeight = this.getHeight();
-	private int componentWidth = this.getWidth();
-	private int halfHeight = componentHeight/2;
-	private int halfWidth = componentWidth/2;
-	private int quarterHeight = componentHeight/4;
-	private int quarterWidth = componentWidth/4;	
-	private int fifthHeight = componentHeight/5;
-	private int eightWidth = componentWidth/8;
+	private int componentHeight;
+	private int componentWidth;
+	private int halfHeight;
+	private int halfWidth;
+	private int quarterHeight;
+	private int quarterWidth;	
+	private int fifthHeight;
+	private int eightWidth;
 	
 	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 
+		componentHeight = this.getHeight();
+		componentWidth = this.getWidth();
+		halfHeight = componentHeight/2;
+		halfWidth = componentWidth/2;
+		quarterHeight = componentHeight/4;
+		quarterWidth = componentWidth/4;	
+		fifthHeight = componentHeight/5;
+		eightWidth = componentWidth/8;
+		
 		g.setColor(Color.BLACK);
 		drawShape(g);
 		g.setColor(Color.RED);

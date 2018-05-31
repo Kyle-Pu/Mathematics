@@ -100,31 +100,51 @@ public class AreaView extends JFrame{
 	}
 
 	public void rectangleRepaint(PropertyChangeEvent event) {
-		double height = Double.parseDouble(recHeight.getText());
-		double width = Double.parseDouble(recWidth.getText());
-		recPaint.setRectangleHeight(height);
-		recPaint.setRectangleWidth(width);
-		recPaint.repaint();
+		try {
+			double height = Double.parseDouble(recHeight.getText());
+			double width = Double.parseDouble(recWidth.getText());
+			recPaint.setRectangleHeight(height);
+			recPaint.setRectangleWidth(width);
+			recPaint.repaint();
+		}
+		catch (NumberFormatException e) {
+			// ignore
+		}
 	}
 	
 	public void circleRepaint(PropertyChangeEvent event) {
-		double radius = Double.parseDouble(cirRadius.getText());
-		cirPaint.setCircleRadius(radius);
-		cirPaint.repaint();
+		try {
+			double radius = Double.parseDouble(cirRadius.getText());
+			cirPaint.setCircleRadius(radius);
+			cirPaint.repaint();
+		}
+		catch (NumberFormatException e) {
+			// ignore
+		}
 	}
 	
 	public void triangleRepaint(PropertyChangeEvent event) {
-		double height = Double.parseDouble(triHeight.getText());
-		double width = Double.parseDouble(triLength.getText());
-		triPaint.setTriangleHeight(height);
-		triPaint.setTriangleLength(width);
-		triPaint.repaint();
+		try {
+			double height = Double.parseDouble(triHeight.getText());
+			double width = Double.parseDouble(triLength.getText());
+			triPaint.setTriangleHeight(height);
+			triPaint.setTriangleLength(width);
+			triPaint.repaint();
+		}
+		catch (NumberFormatException e) {
+			// ignore
+		}
 	}
 	
 	public void squareRepaint(PropertyChangeEvent event) {
-		double side = Double.parseDouble(squSide.getText());
-		squPaint.setSquareSide(side);
-		squPaint.repaint();
+		try {
+			double side = Double.parseDouble(squSide.getText());
+			squPaint.setSquareSide(side);
+			squPaint.repaint();
+		}
+		catch (NumberFormatException e) {
+			// ignore
+		}
 	}
 	
 	
