@@ -75,61 +75,55 @@ public class AreaView extends JFrame{
 		recPanel.add(recHeight);
 		recPanel.add(recWidthLabel);
 		recPanel.add(recWidth);
-		recHeight.addPropertyChangeListener("value", this::recRepaint);
-		recWidth.addPropertyChangeListener("value", this::recRepaint);
+		recHeight.addPropertyChangeListener("value", this::rectangleRepaint);
+		recWidth.addPropertyChangeListener("value", this::rectangleRepaint);
 		
 		//circle input panel
 		cirPanel.add(cirRadiusLabel);
 		cirPanel.add(cirRadius);	
-		cirRadius.addPropertyChangeListener("value", this::cirRepaint);
+		cirRadius.addPropertyChangeListener("value", this::circleRepaint);
 		
 		//triangle input panel
 		triPanel.add(triLengthLabel);
 		triPanel.add(triLength);
 		triPanel.add(triHeightLabel);
 		triPanel.add(triHeight);
-		triLength.addPropertyChangeListener("value", this::triRepaint);
-		triHeight.addPropertyChangeListener("value", this::triRepaint);
+		triLength.addPropertyChangeListener("value", this::triangleRepaint);
+		triHeight.addPropertyChangeListener("value", this::triangleRepaint);
 		
 		//triangle input panel
 		squPanel.add(squSideLabel);
 		squPanel.add(squSide);		
-		squSide.addPropertyChangeListener("value", this::squRepaint);
+		squSide.addPropertyChangeListener("value", this::squareRepaint);
 		
 		add(panel);
 	}
 
-	public void recRepaint(PropertyChangeEvent event) {
+	public void rectangleRepaint(PropertyChangeEvent event) {
 		double height = Double.parseDouble(recHeight.getText());
 		double width = Double.parseDouble(recWidth.getText());
 		recPaint.setRectangleHeight(height);
-		recHeight.setValue(height);
 		recPaint.setRectangleWidth(width);
-		recWidth.setValue(width);
 		recPaint.repaint();
 	}
 	
-	public void cirRepaint(PropertyChangeEvent event) {
+	public void circleRepaint(PropertyChangeEvent event) {
 		double radius = Double.parseDouble(cirRadius.getText());
-		cirPaint.setRadius(radius);
-		cirRadius.setValue(radius);
+		cirPaint.setCircleRadius(radius);
 		cirPaint.repaint();
 	}
 	
-	public void triRepaint(PropertyChangeEvent event) {
+	public void triangleRepaint(PropertyChangeEvent event) {
 		double height = Double.parseDouble(triHeight.getText());
 		double width = Double.parseDouble(triLength.getText());
-		triPaint.setHeight(height);
-		triHeight.setValue(height);
-		triPaint.setLength(width);
-		triLength.setValue(width);
+		triPaint.setTriangleHeight(height);
+		triPaint.setTriangleLength(width);
 		triPaint.repaint();
 	}
 	
-	public void squRepaint(PropertyChangeEvent event) {
+	public void squareRepaint(PropertyChangeEvent event) {
 		double side = Double.parseDouble(squSide.getText());
-		squPaint.setSide(side);
-		squSide.setValue(side);
+		squPaint.setSquareSide(side);
 		squPaint.repaint();
 	}
 	

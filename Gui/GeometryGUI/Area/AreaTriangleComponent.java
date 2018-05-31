@@ -9,8 +9,18 @@ import javax.imageio.ImageIO;
 import javax.swing.JComponent;
 
 public class AreaTriangleComponent extends JComponent{
-	private double length;
-	private double height;
+	private double triangleLength;
+	private double triangleHeight;
+	
+	private int componentHeight = this.getHeight();
+	private int componentWidth = this.getWidth();
+	private int halfHeight = componentHeight/2;
+	private int halfWidth = componentWidth/2;
+	private int quarterHeight = componentHeight/4;
+	private int quarterWidth = componentWidth/4;	
+	private int threeQuarterWidth = 3*quarterWidth;
+	private int threeQuarterHeight = 3*quarterHeight;
+	private int fifthHeight = componentHeight/5;
 
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -26,32 +36,30 @@ public class AreaTriangleComponent extends JComponent{
 
 	//draw the rectangle
 	private void drawShape(Graphics g) {
-		int w = this.getWidth();
-		int h = this.getHeight();
-		g.drawLine(w/2, h/4, 3*(w/4), 3*(h/4));
-		g.drawLine(3*(w/4), 3*(h/4), w/4, 3*(h/4));
-		g.drawLine(w/4, 3*(h/4), w/2, h/4);
-		g.drawLine(w/2, h/4, w/2, 3*(h/4));
+		g.drawLine(halfWidth, quarterHeight, threeQuarterWidth, threeQuarterHeight);
+		g.drawLine(threeQuarterWidth, threeQuarterHeight, quarterWidth, threeQuarterHeight);
+		g.drawLine(quarterWidth, threeQuarterHeight, halfWidth, quarterHeight);
+		g.drawLine(halfWidth, quarterHeight, halfWidth, threeQuarterHeight);
 		
 	}
 	
 	//draw height and length
 	private void drawDimentions(Graphics g) {
-		g.drawString("Height = " + height, this.getWidth()/4, (this.getHeight()/2));
-		g.drawString("Length = " + length, this.getWidth()/2, (int)(4.5*(this.getHeight()/5)));
+		g.drawString("Height = " + triangleHeight, quarterWidth, halfHeight);
+		g.drawString("Length = " + triangleLength, halfWidth, (int)(4.5*fifthHeight));
 	}
 	
 	//draw area
 	private void drawArea(Graphics g) {
-		g.drawString("Area = " + AreaFormulas.triangle(length, height), this.getWidth()/2, (this.getHeight()/5));
+		g.drawString("Area = " + AreaFormulas.triangle(triangleLength, triangleHeight), halfWidth, fifthHeight);
 	}
 	
-	public void setLength(double length) {
-		this.length = length;
+	public void setTriangleLength(double triangleLength) {
+		this.triangleLength = triangleLength;
 	}
 
-	public void setHeight(double height) {
-		this.height = height;
+	public void setTriangleHeight(double triangleHeight) {
+		this.triangleHeight = triangleHeight;
 	}
 
 
