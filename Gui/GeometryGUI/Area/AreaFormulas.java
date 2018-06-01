@@ -1,8 +1,8 @@
 package GeometryGUI.Area;
 
-
 /**
- * This class contains methods that return the area's of different shapes. 
+ * This class contains methods that return the area's of different shapes.
+ * 
  * @author scohen40
  */
 public class AreaFormulas {
