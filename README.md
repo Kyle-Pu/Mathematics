@@ -6,10 +6,6 @@ Feel free to subscribe to our contribution stream on CodeTriage!
 
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
 
-## Travis-CI
-[![Build Status](https://travis-ci.org/Kyle-P/Mathematics.svg?branch=master)](https://travis-ci.org/Kyle-P/Mathematics)
-(Results from the most recent buid)
-
 ## Details
 The purpose of this app is to assist students with understanding math formulas. Each calculator computes a specific type of calculation for the user and also explains why the answer is what it is.
 
