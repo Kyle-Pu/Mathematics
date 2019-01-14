@@ -1,10 +1,9 @@
-
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class DecimalToBInaryConversion {
+public class DecimalToBinaryConversion {
     
    /*
     * This method converts the decimal number to the appropriate binary number
