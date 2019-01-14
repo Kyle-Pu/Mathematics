@@ -1,11 +1,10 @@
-
 import static java.lang.Math.sqrt;
 import static java.lang.System.exit;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class specialTriangles {
+public class SpecialTriangles {
     public static void main(String[] args) {
         
     try{
