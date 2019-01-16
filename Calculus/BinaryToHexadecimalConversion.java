@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * @author Savvas Theofilou
+ * credits: @petridisa
  */
 public class BinaryToHexadecimalConversion {
     
