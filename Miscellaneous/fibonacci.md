@@ -1,4 +1,4 @@
-fibonacci class explanation
+Fibonacci class explanation
 
 User gives a positive integer number. If user types something else than an integer number greater than or equal to zero the program terminates.
 If the input is ok a method checks if the number belongs to fibonacci sequence.

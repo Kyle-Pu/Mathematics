@@ -1,5 +1,5 @@
 # Mathematics
-Various command line mathematics formulas (calculators) coded in Java!
+Creating a HUGE math library coded in Java! Great for both new and experienced developers. All math levels are welcome!!!
 
 [![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
 Feel free to subscribe to our contribution stream on CodeTriage!
@@ -7,7 +7,7 @@ Feel free to subscribe to our contribution stream on CodeTriage!
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
 
 ## Details
-The purpose of this app is to assist students with understanding math formulas. Each calculator computes a specific type of calculation for the user and also explains why the answer is what it is.
+The purpose of this app is to assist students with understanding math formulas. Some calculators compute a specific type of calculation for the user and also explain why the answer is what it is.
 
 ## Contributing
 - We have lots of opportunities available for NOVICE to ADVANCED programmers. Contributions range from developing new math programs to developing graphing calculators and other more complex tasks!
