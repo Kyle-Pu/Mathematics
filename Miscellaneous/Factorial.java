@@ -19,7 +19,7 @@ public static void main(String[] args){
     try{
         Scanner scan = new Scanner (System.in);
     
-    //Prompt user for a number to calculte it's factorial number
+    //Prompt user for a number to calculte its factorial number
     System.out.println("Insert a positive integer number: ");
     int num = scan.nextInt();
     if(num<0)throw(new InputMismatchException());
