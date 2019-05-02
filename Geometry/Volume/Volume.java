@@ -16,7 +16,8 @@ public class Volume{
 		System.out.println("1	Cube    \n" +
 				   "2	Cuboid  \n" + 
 				   "3	Cylinder\n" + 
-				   "4	Sphere  \n" );
+				   "4	Sphere  \n" +
+				   "5   Pyramid \n");
 
 		int userChoice = scan.nextInt();
 
@@ -25,6 +26,7 @@ public class Volume{
 			case 2: cuboid();   break;
 			case 3: cylinder(); break;
 			case 4: sphere();   break;
+			case 5: pyramid(); break;
 
 			default: System.out.println("Invalid Choice! Try Again\n");
 		}
@@ -69,7 +71,17 @@ public class Volume{
 		System.out.println("Enter the Radius of the Sphere: ");
 		double radius = scan.nextDouble();
 
-		System.out.println("Volume of Sphere is : " + (4/3) * Math.PI * radius * radius * radius);
+		System.out.println("Volume of Sphere is : " + (4.0/3) * Math.PI * radius * radius * radius);
+	}
+
+	public static void pyramid(){
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the area of the base: ");
+		double base = scan.nextDouble();
+		System.out.println("Enter the Height of the Pyramid: ");
+		double height = scan.nextDouble();
+
+		System.out.println("Volume of Pyramid is : "+(1.0/3)*base*height);
 	}
 
 	
