@@ -1,7 +1,7 @@
 import java.util.*;
 
 class PrimeFactors {
-	
+
 	public static void main(String[] args) {
 
 		System.out.println("Welcome to the prime factors calculator!");
@@ -15,49 +15,33 @@ class PrimeFactors {
 
 			System.out.println("Prime factors of " + numToFactor + " are: ");
 
-			/*
-			 * Algorithm to check for prime factors (starting from 1 to the inputed number, if 'i'
-			 * divides into the numToFactor without a remainder and isPrime returns true, 'i' is a prime factor of
-			 * numToFactor)
-			 */
-
-			if (isPrime(numToFactor)){
-				System.out.println("1*" + numToFactor);
-				System.exit(0);
-			}
-			for (int i = 2; i <= numToFactor; i++) {
-				if ((numToFactor % i == 0) && (isPrime(i))) {
-					//Keep dividing numToFactoe by i until it is divisible
-					//and print i as prime factor each time it divides numToFactor 
+			// Pollard Rho Prime decomposition
+			boolean originalNumberIsPrime = true;
+			for (int i = 2; i <= Math.sqrt(numToFactor); i++) {
+				if (numToFactor % i == 0) {
+					//Keep dividing numToFactor by i until it is divisible
+					//and print i as prime factor each time it divides numToFactor
 					while(numToFactor % i == 0 ){
 						numToFactor /= i;
 						System.out.print(i);
+						originalNumberIsPrime = false;
 						if(numToFactor != 1)
 							System.out.print("*");
 					}
 				}
 			}
 
+			if(originalNumberIsPrime) {
+				System.out.println("1*" + numToFactor);
+			}
+
 			scan.close();
-			
+
 		} catch (InputMismatchException ex) {
 			System.out.println();
-			System.err.println("Please provide only numbers (no text). Also, please ensure your number is within the range of -2,147,483,648 to 2,147,483,647Restart the program and try again!");
+			System.err.println("Please provide only numbers (no text). Also, please ensure your number is within the range of -2,147,483,648 to 2,147,483,647. Restart the program and try again!");
 			main(new String[0]);
 		}
-
-	}
-
-	public static boolean isPrime(int num) {
-
-		for (int i = 2; i < num; i++) {
-			if (num % i == 0) {
-				return false;
-			}
-		}
-
-		return true;
-
 	}
 
 }
