@@ -25,5 +25,3 @@ After completing the program, please be sure to remove the appropriate item from
  - Riemann Sums
  - Integration
  - Differentiation
- - Gamma Function Calculation
- 
