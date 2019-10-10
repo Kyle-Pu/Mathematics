@@ -4,7 +4,6 @@ Feel free to contribute! Always happy to receive new contributions. Please remem
 After completing the program, please be sure to remove the appropriate item from the list below!
 ## Algebra
 - Find the intercepts of a line
-- Prime Factorization
 - Findind the nearest integer to the square root of a number
 ## Geometry
 - Area of squares, triangles, rectangles, etc.
@@ -25,5 +24,3 @@ After completing the program, please be sure to remove the appropriate item from
  - Riemann Sums
  - Integration
  - Differentiation
- - Gamma Function Calculation
- 
