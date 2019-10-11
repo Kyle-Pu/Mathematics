@@ -14,7 +14,8 @@ public class Area{
 		"\n 1	Rectangle" +
 		"\n 2	Circle" +
 		"\n 3	Triangle" +
-		"\n 4	Square\n");
+		"\n 4	Square"+
+		"\n 5	Parallelogram\n"	);
 
 		int userChoice = scan.nextInt();
 
@@ -26,6 +27,7 @@ public class Area{
 			case 2 : area = circle(); break;
 			case 3 : area = triangle(); break;
 			case 4 : area = square(); break;
+			case 5 : area = parallelogram(); break;
 			default: System.out.println("Invalid Choice.\n Exiting");
 		}
 
@@ -77,6 +79,18 @@ public class Area{
 		double side = scan.nextDouble();
 
 		return side * side;
+	}
+
+	public static double parallelogram(){
+
+		Scanner scan = new Scanner(System.in);
+		System.out.println("What is the length of Base of the Parallelogram:\t");
+		double base = scan.nextDouble();
+
+		System.out.println("What is the length of Height of the Parallelogram:\t");
+		double height = scan.nextDouble();
+
+		return base * height;
 	}
 
 }
