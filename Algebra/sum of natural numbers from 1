@@ -1,0 +1,18 @@
+import java.io.*;
+public class sumexplain
+{
+		public static void main(Strings args[])
+		{
+					BufferedReader in = new BufferedReader(new InputStreamReader(System.in))
+					System.out.println(" please enter the number till which you want to find the sum");
+					int n = Integer.parseInt(in.readLine());
+					System.out.println("Let us define S as the total sum from 1+2..+n");
+					System.out.println("Thus we can also define S as the total sum from n + n-1 + ...+1");
+					System.out.println("Adding these two things together, we get 2S = n+1 + n+1 + n+1 ...n times");
+					System.out.println("Thus we get 2S = n*(n+1)");
+					System.out.println("Thus we have S = n*(n+1)/2");
+					int s = n*(n+1)/2;
+					System.out.println("Thus the sum is "+s);
+		}
+}
+    
