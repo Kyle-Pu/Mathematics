@@ -1,0 +1,65 @@
+package com.company;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class PythagoreanTriplets {
+
+  static void getTriplets(int limit) {
+    int a, b, c = 0;
+    int m = 2;
+
+    // Limiting c would limit
+    // all a, b and c
+    while (c < limit) {
+
+      // now loop on j from 1 to i-1
+      for (int n = 1; n < m; ++n) {
+        // Evaluate and print
+        // triplets using
+        // the relation between
+        // a, b and c
+        a = m * m - n * n;
+        b = 2 * m * n;
+        c = m * m + n * n;
+
+        if (c > limit) {
+          break;
+        }
+
+        System.out.println(a + " " + b + " " + c);
+      }
+      m++;
+    }
+
+  }
+
+  public static void main(String[] args) {
+    Scanner in = new Scanner(System.in);
+
+    // Print description and prompt user input.
+    System.out.println("Pythagorean triplets");
+    System.out.println("");
+    System.out.println(
+        "A Pythagorean triplet is a set of three positive integers a, b and c such that a^2 + b^2 = c^2.");
+    System.out.println("");
+    System.out.println("Most well known example of a pythagorean triplet is 3,4,5 since 9+16=25");
+    System.out.println("");
+    System.out
+        .println("Enter the maximum limit for a number in the triplet to find out more triplets");
+    System.out.println("");
+
+    try {
+
+      int limit = in.nextInt();
+      getTriplets(limit);
+
+    } catch (InputMismatchException ex) {
+      System.out.println("Seems you entered an incorrect symbol, please try again");
+      main(null);
+    }
+
+  }
+
+// This code is contributed by Manish.
+}
