@@ -3,7 +3,6 @@ Feel free to contribute! Always happy to receive new contributions. Please remem
 
 After completing the program, please be sure to remove the appropriate item from the list below!
 ## Algebra
-- Findind the nearest integer to the square root of a number
 ## Geometry
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
