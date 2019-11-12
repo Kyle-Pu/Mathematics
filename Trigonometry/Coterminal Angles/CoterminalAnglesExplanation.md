@@ -18,4 +18,4 @@ and 360 is obviously a multiple of 360
 
 ## Using Our Program:
 
-The program will first ask you to choose the units of angles (Degrees or Radians). Once you choose the units, you provide the angle values to check if they are coterminal or not. The prints the the result message (whether coterminal or not) on the console.
+The program will first ask you to choose the units of angles (Degrees or Radians). Once you choose the units, you provide the angle values to check if they are coterminal or not. The prints the result message (whether coterminal or not) on the console.
