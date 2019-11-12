@@ -2,7 +2,7 @@
 
 ## What are coterminal angles?
 
-Two angles are coterminal if they are drawn in the standard position and both have their terminal sides in the same location. Which means that the angles look identical when drawn on X-Y axes but have different values. This implies that the difference between the angles is a multiple of 360<sup>o</sup> or 2\pi radians.
+Two angles are coterminal if they are drawn in the standard position and both have their terminal sides in the same location. Which means that the angles look identical when drawn on X-Y axes but have different values. This implies that the difference between the angles is a multiple of 360<sup>o</sup> or  2\[\pi\] radians.
 
 Here is an example of coterminal angles \alpha and \beta
 
