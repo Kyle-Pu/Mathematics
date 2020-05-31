@@ -44,5 +44,3 @@ public class CalcHandler{
 		return thread;
 	}
 }
-
-//remove unused import
