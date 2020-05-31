@@ -176,34 +176,54 @@ public class GraphHandler {
 		        }
 
 		        double parseFactor() {
-		            if (eat('+')) return parseFactor(); // unary plus
-		            if (eat('-')) return -parseFactor(); // unary minus
+		        	boolean isUnaryPlus=eat('+');
+		        	boolean isUnaryMinus=eat('-');
+		        	
+		            if (isUnaryPlus) return parseFactor();
+		            if (isUnaryMinus) return -parseFactor(); 
 
 		            double result;
 		            int startPos = this.position;
-		            if (eat('(')) { // parentheses
+		            boolean isParentheses = eat('(');
+		            boolean isNumbers = (aChar >= '0' && aChar <= '9') || aChar == '.';
+		            boolean isFunctions = aChar >= 'a' && aChar <= 'z';
+		            boolean isExponentiation = eat('^');
+		            
+		            if (isParentheses) { 
 		                result = parseExpression();
 		                eat(')');
-		            } else if ((aChar >= '0' && aChar <= '9') || aChar == '.') { // numbers
-		                while ((aChar >= '0' && aChar <= '9') || aChar == '.') nextChar();
-		                result = Double.parseDouble(mathExpression.substring(startPos, this.position));
-		            } else if (aChar >= 'a' && aChar <= 'z') { // functions
-		                while (aChar >= 'a' && aChar <= 'z') nextChar();
-		                String func = mathExpression.substring(startPos, this.position);
+		            } else if (isNumbers) {
+		                while (isNumbers) nextChar();
+		                result = changeToDouble(getSubString(mathExpression, startPos));
+		            } else if (isFunctions) {
+		                while (isFunctions) nextChar();
+		                String function = getSubString(mathExpression, startPos);
 		                result = parseFactor();
-		                if (func.equals("sqrt")) result = Math.sqrt(result);
-		                else if (func.equals("sin")) result = Math.sin(Math.toRadians(result));
-		                else if (func.equals("cos")) result = Math.cos(Math.toRadians(result));
-		                else if (func.equals("tan")) result = Math.tan(Math.toRadians(result));
-		                else throw new RuntimeException("Unknown function: " + func);
+		                if (function.equals("sqrt")) result = Math.sqrt(result);
+		                else if (function.equals("sin")) result = Math.sin(changeToRadians(result));
+		                else if (function.equals("cos")) result = Math.cos(changeToRadians(result));
+		                else if (function.equals("tan")) result = Math.tan(changeToRadians(result));
+		                else throw new RuntimeException("Unknown function: " + function);
 		            } else {
 		                throw new RuntimeException("Unexpected: " + (char)aChar);
 		            }
 
-		            if (eat('^')) result = getExponentiation(result); 
+		            if (isExponentiation) result = getExponentiation(result); 
 
 		            return result;
 		        }
+
+				private double changeToRadians(double result) {
+					return Math.toRadians(result);
+				}
+
+				private String getSubString(final String mathExpression, int startPos) {
+					return mathExpression.substring(startPos, this.position);
+				}
+
+				private double changeToDouble(final String Expression) {
+					return Double.parseDouble(Expression);
+				}
 
 				private double getExponentiation(double result) {
 					return Math.pow(result, parseFactor());
