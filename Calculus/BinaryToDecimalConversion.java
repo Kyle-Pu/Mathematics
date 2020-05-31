@@ -1,17 +1,14 @@
+package Calculus;
+
 import java.util.*;
 
  class BinaryToDecimalConversion {
-
-   /*
-    * This method converts the binary number to the appropriate decimal number
-    * and returns the decimal number
-    */
-    public static int conversion(int binary){
-        int decimal=0,temp=1;
+    public static int binaryToDecimalConversion(int binary){
+        int decimal=0,digit=1;
         while(binary>0){
-            decimal+=temp*(binary%10);
+            decimal+=digit*(binary%10);
             binary/=10;
-            temp*=2;
+            digit*=2;
         }
         
         return decimal;
@@ -22,10 +19,9 @@ import java.util.*;
     try{
     Scanner scan = new Scanner (System.in);
     
-    //Prompt user for binary number to convert to decimal
     System.out.println("Please input a binary number to convert...");
     int numToConvert = scan.nextInt();
-    int convertedNum=conversion(numToConvert);
+    int convertedNum=binaryToDecimalConversion(numToConvert);
     System.out.println("Binary number: "+numToConvert + " is equal to decimal number: "+ convertedNum );
   
  
@@ -37,5 +33,4 @@ import java.util.*;
   }   
 
 }
-    
-
+ 
