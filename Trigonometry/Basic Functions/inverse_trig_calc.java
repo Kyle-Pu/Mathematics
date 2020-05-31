@@ -2,249 +2,170 @@ import java.util.Scanner;
 
 public class inverse_trig_calc {
 
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 
-        System.out.println("Welcome to the trigonometry calculator!");
-        System.out.println("\nThis is the inverese trigonometry calculator");
-        Scanner scan = new Scanner(System.in);
+		printWelcome();
+        doCalculate(getChoice());
+        
+	}
+	
+	private static void doCalculate(int userChoice) {
+		
+		switch(userChoice){
+		
+			case 1: cotangent(); break;
+			case 2: secant(); break;
+			case 3: cosecant(); break;
+			case 4: coth(); break;
+			case 5: sech(); break;
+			case 6: cosech(); break;
+			case 7: arccot(); break;
+			case 8: arcsecant(); break;
+			case 9: arccosec(); break;
+			
+			default: printInvalidChoice();
+		}
+	}
 
-        //Prompt user for which trigonometry function
-        System.out.println("What inverse trigonometry function do you want to use? :"
-                + "\n 1 Cotangent"
-                + "\n 2 Secant"
-                + "\n 3 Cosec"
-                + "\n 4 Coth"
-                + "\n 5 Sech"
-                + "\n 6 Cosech"
-                + "\n 7 Arccot"
-                + "\n 8 Arcsecant"
-                + "\n 9 Arccosec\n");
+	private static void printInvalidChoice() {
+		System.out.println("Invalid Choice.\n Exiting");
+	}
 
-        int userChoice = scan.nextInt();
+	private static void printWelcome() {
+		System.out.println("Welcome to the trigonometry calculator!");
+		System.out.println("\nThis is the inverese trigonometry calculator");
+	}
 
+	private static int getChoice() {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("What inverse trigonometry function do you want to use? :"
+				+ "\n 1 Cotangent"
+				+ "\n 2 Secant"
+				+ "\n 3 Cosec"
+				+ "\n 4 Coth"
+				+ "\n 5 Sech"
+				+ "\n 6 Cosech"
+				+ "\n 7 Arccot"
+				+ "\n 8 Arcsecant"
+				+ "\n 9 Arccosec\n");
 
-        switch(userChoice){
+		int userChoice = scan.nextInt();
+		scan.close();
+		return userChoice;
+	}
+	
+	public static double cotangent(){
+		String angle = getAngle();
+		System.out.println( "Cotangent of " + angle + " is " + getCotangentValue(angle) );
+		return getCotangentValue(angle);
+	}
 
-            case 1: cotangent(); break;
-            case 2: secant(); break;
-            case 3: cosecant(); break;
-            case 4: coth(); break;
-            case 5: sech(); break;
-            case 6: cosech(); break;
-            case 7: acot(); break;
-            case 8: asec(); break;
-            case 9: acosec(); break;
+	private static double getCotangentValue(String angle) {
+		return 1/(Math.tan(convertToRadians(angle)));
+	}
 
-
-            default: System.out.println("Invalid Choice.\n Exiting");
-        }
-
+    private static double convertToRadians(String angle) {
+        return Math.toRadians(convertToDouble(angle));
     }
 
-    public static double cotangent(){
+	private static double convertToDouble(String angle) {
+        return Double.parseDouble(angle);
+	}
 
-        // Ask for user input
+    private static String getAngle() {
         System.out.print("Enter an angle in degrees: ");
-
-        // use scanner to read the console input
         Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String s = scan.nextLine();
-
-        // close the scanner object
+        String angle = scan.nextLine();
         scan.close();
-
-        // convert the string input to double
-        double value = Double.parseDouble(s);
-        // convert the value to radians
-        double valueRadians = Math.toRadians(value);
-
-        // get the cot of the angle
-        double cotValue = 1/(Math.tan(valueRadians));
-        System.out.println("Cotangent of" + s + " is " + cotValue);
-        return cotValue;
+        return angle;
     }
 
     public static double secant(){
 
-        // Ask for user input
-        System.out.print("Enter an angle in degrees: ");
+        String angle = getAngle();
+        System.out.println("secant of " + angle + " is " + getSecantValue(angle));
+        return getSecantValue(angle);
+    }
 
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String s = scan.nextLine();
-
-        // close the scanner object
-        scan.close();
-
-        // convert the string input to double
-        double value = Double.parseDouble(s);
-        // convert the value to radians
-        double valueRadians = Math.toRadians(value);
-
-        // get the secant of the angle
-        double secantValue = 1/(Math.cos(valueRadians));
-        System.out.println("Secant of " + s + " is " + secantValue);
-        return secantValue;
-
-
+    private static double getSecantValue(String angle) {
+        return 1/(Math.cos(convertToRadians(angle)));
     }
 
     public static double cosecant(){
+       
+    	String angle = getAngle();
+        System.out.println("cosecant of " + angle + " is " + getCosecantValue(angle));
+        return getCosecantValue(angle);
+    }
 
-        // Ask for user input
-        System.out.print("Enter a number : ");
-
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String s = scan.nextLine();
-
-        // close the scanner object
-        scan.close();
-
-        // convert the string input to double
-        double value = Double.parseDouble(s);
-        // convert the value to radians
-        double valueRadians = Math.toRadians(value);
-
-        // get the cosecant of the angle
-        double cosecValue = 1/(Math.sin(valueRadians));
-        System.out.println("Cosecant of " + s + " is " + cosecValue);
-        return cosecValue;
+    private static double getCosecantValue(String angle) {
+        return 1/(Math.sin(convertToRadians(angle)));
     }
 
     public static double coth(){
-        // Ask for user input
-        System.out.print("Enter a number : ");
+       
+        String angle = getAngle();
+        System.out.println("coth of " + angle + " is " + getCothValue(angle));
+        return getCothValue(angle);
+    }
 
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String s = scan.nextLine(); //changed from s to input for clear reading
-
-        // close the scanner object
-        scan.close();
-
-        // convert the string input to double
-        double value = Double.parseDouble(s);
-
-        // get the coth of the angle
-        double cothValue = 1/(Math.tanh(value));
-        System.out.println("Coth of " + s + " is " + cothValue);
-        return cothValue;
+    private static double getCothValue(String angle) {
+        return 1/(Math.tanh(convertToDouble(angle)));
     }
 
     public static double sech(){
 
-        // Ask for user input
-        System.out.print("Enter your number: ");
+        String angle = getAngle();
+        System.out.println("sech of " + angle + " is " + getSechValue(angle));
+        return getSechValue(angle);
+    }
 
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String input = scan.nextLine();
-
-        // close the scanner object
-        scan.close();
-
-        // convert the string input to double
-        double value = Double.parseDouble(input);
-
-        // get the sech of the angle
-        double sechValue = 1/(Math.cosh(value));
-        System.out.println("Sech of " + input + " is " + sechValue);
-        return sechValue;
+    private static double getSechValue(String angle) {
+        return 1/(Math.cosh(convertToDouble(angle)));
     }
 
 
     public static double cosech(){
 
-        // Ask for user input
-        System.out.print("Enter your number: ");
-
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String input = scan.nextLine();
-
-        // close the scanner object
-        scan.close();
-
-        // convert the string input to double
-        double value = Double.parseDouble(input);
-
-        // get the cosech of the angle
-        double cosechValue = 1/(Math.sinh(value));
-        System.out.println("Cosech of " + input + " is " + cosechValue);
-        return cosechValue;
+        String angle = getAngle();
+        System.out.println("cosech of " + angle + " is " + getCosechValue(angle));
+        return getCosechValue(angle);
     }
 
-    public static double acot(){
-
-        // Ask for user input
-        System.out.print("Enter your number: ");
-
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String s = scan.nextLine();
-
-        // close the scanner object
-        scan.close();
-
-        // get the arccot of the angle
-        // here 1.570795 is the value for pi/2 (i.e) 3.14159/2
-        double acotValue = 1.570795 -  (Math.atan(Double.parseDouble(s)));
-        System.out.println("Arccot of " + s + " is " + acotValue + " radians");
-        return acotValue;
+    private static double getCosechValue(String angle) {
+	    return 1/(Math.sinh(convertToDouble(angle)));
     }
 
-    public static double asec(){
+    public static double arccot(){
 
-        // Ask for user input
-        System.out.print("Enter your number ");
-
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String s = scan.nextLine();
-
-        // close the scanner object
-        scan.close();
-
-        // get the arcsecant of the user input
-        double asecValue = Math.acos(1/Double.parseDouble(s));
-        System.out.println("Arcsecant of " + s + " is " + asecValue + " radians");
-        return asecValue;
+    	String angle = getAngle();
+    	System.out.println("arccot of " + angle + " is " + getArccotValue(angle) + " radians");
+    	return getArccotValue(angle);
+    }
+    
+    private static double getArccotValue(String angle) {
+    	return 1.570795 - (Math.atan(convertToDouble(angle)));
     }
 
-    public static double acosec(){
-
-        // Ask for user input
-        System.out.print("Enter your number: ");
-
-        // use scanner to read the console input
-        Scanner scan = new Scanner(System.in);
-
-        // Assign the user to String variable
-        String s = scan.nextLine();
-
-        // close the scanner object
-        scan.close();
-
-        // get the arccosec of the user input
-        double acosecValue = Math.asin(1/Double.parseDouble(s));
-        System.out.println("Arccosec of " + s + " is " + acosecValue + " radians");
-        return acosecValue;
+    public static double arcsecant(){
+    	String angle = getAngle();
+        System.out.println("Arcsecant of " + angle + " is " + getArcsecantValue(angle) + " radians");
+        return getArcsecantValue(angle);
     }
+
+    private static double getArcsecantValue(String angle) {
+    	return Math.acos(1/convertToDouble(angle));
+    }
+
+    public static double arccosec(){
+
+    	String angle = getAngle();
+        System.out.println("Arccosec of " + angle + " is " + getArccosecValue(angle) + " radians");
+        return getArccosecValue(angle);
+    }
+
+    private static double getArccosecValue(String angle) {
+	   return Math.asin(1/convertToDouble(angle));
+   }
 }
