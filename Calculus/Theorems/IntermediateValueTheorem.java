@@ -45,4 +45,3 @@ public class IntermediateValueTheorem {
 		return (min < value) && (max > value);
 	}
 }
-// Comment remove, Extract variable, Extract Method
