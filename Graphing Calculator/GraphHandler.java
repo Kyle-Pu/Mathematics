@@ -24,21 +24,10 @@ public class GraphHandler {
 	public void graphingCalculator(){
 		
 		printDirections();
-
 		
-		String formula = getFormula();
-		String revisedFormula = formula; //For swapping in new input values each iteration to calculate coordinates
+		getCoordinates(getFormula(), getLeftBound(), getRightBound(), getStep());
 		
-		double leftBound = getLeftBound();
-
-		double rightBound = getRightBound();
-
-		double step = getStep();
-
-		
-		getCoordinates(formula, leftBound, rightBound, step);
-		
-		getScale(leftBound, rightBound);
+		getScale(getLeftBound(), getRightBound());
 		
 		}
 
