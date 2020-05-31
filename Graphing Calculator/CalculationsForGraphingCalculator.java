@@ -4,57 +4,88 @@ public class CalculationsForGraphingCalculator {
 
 	public static void main(String[] args) {
 
-		System.out.println(
-				"Welcome to the data points calculator! This program creates a table of values based on a given formula.");
-		System.out.println();
-		System.out.print("Please insert your equation in terms of x. Separate each term with a space (Ex: x^2 + 2*x + 3   You MUST include all signs (2x should be 2*x)): y = ");
+		printDirections();
 
-		Scanner scan = new Scanner(System.in);
-		String formula = scan.nextLine();
+
+		String formula = getFormula();
 		String revisedFormula = formula;
 		
+		double leftBound = getLeftBound();
+
+		double rightBound = getRightBound();
+
+		double step = getStep();
+		
+		for (double i = leftBound; i <= rightBound; i += step) {
+
+			String input = Double.toString(i);
+			revisedFormula = formula.replaceAll("x", input);
+			System.out.println(input + "     |     " + evaluate(revisedFormula));
+			
+		}
+		
+
+	}
+
+	private static String getFormula() {
+		Scanner scan = new Scanner(System.in);
+		String formula = scan.nextLine();
+		return formula;
+	}
+
+	private static double getStep() {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Step of your function (the increments at which the function is evaluated at: ");
+		double step = scan.nextDouble();
+
+		System.out.println("     x     " + "          y");
+		System.out.println("_____________________________");
+		return step;
+	}
+
+	private static double getRightBound() {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Right bound of your domain? ");
+		double rightBound = scan.nextDouble();
+
+		System.out.println();
+		return rightBound;
+	}
+
+	private static double getLeftBound() {
+		Scanner scan = new Scanner(System.in);
 		System.out.println();
 
 		System.out.print("Left bound of your domain? ");
 		double leftBound = scan.nextDouble();
 
 		System.out.println();
-
-		System.out.print("Right bound of your domain? ");
-		double rightBound = scan.nextDouble();
-
-		System.out.println();
-
-		System.out.print("Step of your function (the increments at which the function is evaluated at: ");
-		double step = scan.nextDouble();
-
-		System.out.println("     x     " + "          y");
-		System.out.println("_____________________________");
-		
-		for (double i = leftBound; i <= rightBound; i += step) {
-
-			String input = Double.toString(i);
-			revisedFormula = formula.replaceAll("x", input);
-			System.out.println(input + "     |     " + eval(revisedFormula));
-			
-		}
-		
-		scan.close();
-
+		return leftBound;
 	}
 
-	//https://stackoverflow.com/questions/3422673/evaluating-a-math-expression-given-in-string-form
-	public static double eval(final String str) {
+	private static void printDirections() {
+		System.out.println(
+				"Welcome to the data points calculator! This program creates a table of values based on a given formula.");
+		System.out.println();
+		System.out.print("Please insert your equation in terms of x. Separate each term with a space (Ex: x^2 + 2*x + 3   You MUST include all signs (2x should be 2*x)): y = ");
+	}
+	
+	//Author: https://stackoverflow.com/questions/3422673/evaluating-a-math-expression-given-in-string-form
+	private static double evaluate(final String mathExpression) {
 	    return new Object() {
-	        int pos = -1, ch;
+	        int position = -1, aChar;
 
 	        void nextChar() {
-	            ch = (++pos < str.length()) ? str.charAt(pos) : -1;
+	            aChar = getNextChar(mathExpression);
 	        }
 
+			private int getNextChar(final String mathExpression) {
+				return (++position < mathExpression.length()) ? mathExpression.charAt(position) : -1;
+			}
+
 	        boolean eat(int charToEat) {
-	            while (ch == ' ') nextChar();
-	            if (ch == charToEat) {
+	            while (aChar == ' ') nextChar();
+	            if (aChar == charToEat) {
 	                nextChar();
 	                return true;
 	            }
@@ -63,9 +94,10 @@ public class CalculationsForGraphingCalculator {
 
 	        double parse() {
 	            nextChar();
-	            double x = parseExpression();
-	            if (pos < str.length()) throw new RuntimeException("Unexpected: " + (char)ch);
-	            return x;
+	            double result = parseExpression();
+	            if (position < mathExpression.length())
+					unexpectedCharError();
+	            return result;
 	        }
 
 	        // Grammar:
@@ -75,52 +107,80 @@ public class CalculationsForGraphingCalculator {
 	        //        | number | functionName factor | factor `^` factor
 
 	        double parseExpression() {
-	            double x = parseTerm();
+	            double result = parseTerm();
 	            for (;;) {
-	                if      (eat('+')) x += parseTerm(); // addition
-	                else if (eat('-')) x -= parseTerm(); // subtraction
-	                else return x;
+	                if      (eat('+')) result += parseTerm(); // addition
+	                else if (eat('-')) result -= parseTerm(); // subtraction
+	                else return result;
 	            }
 	        }
 
 	        double parseTerm() {
-	            double x = parseFactor();
+	            double result = parseFactor();
 	            for (;;) {
-	                if      (eat('*')) x *= parseFactor(); // multiplication
-	                else if (eat('/')) x /= parseFactor(); // division
-	                else return x;
+	                if      (eat('*')) result *= parseFactor(); // multiplication
+	                else if (eat('/')) result /= parseFactor(); // division
+	                else return result;
 	            }
 	        }
 
 	        double parseFactor() {
-	            if (eat('+')) return parseFactor(); // unary plus
-	            if (eat('-')) return -parseFactor(); // unary minus
+	        	boolean isUnaryPlus=eat('+');
+	        	boolean isUnaryMinus=eat('-');
+	        	
+	            if (isUnaryPlus) return parseFactor();
+	            if (isUnaryMinus) return -parseFactor(); 
 
-	            double x;
-	            int startPos = this.pos;
-	            if (eat('(')) { // parentheses
-	                x = parseExpression();
+	            double result;
+	            int startPos = this.position;
+	            boolean isParentheses = eat('(');
+	            boolean isNumbers = (aChar >= '0' && aChar <= '9') || aChar == '.';
+	            boolean isFunctions = aChar >= 'a' && aChar <= 'z';
+	            boolean isExponentiation = eat('^');
+	            
+	            if (isParentheses) { 
+	                result = parseExpression();
 	                eat(')');
-	            } else if ((ch >= '0' && ch <= '9') || ch == '.') { // numbers
-	                while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
-	                x = Double.parseDouble(str.substring(startPos, this.pos));
-	            } else if (ch >= 'a' && ch <= 'z') { // functions
-	                while (ch >= 'a' && ch <= 'z') nextChar();
-	                String func = str.substring(startPos, this.pos);
-	                x = parseFactor();
-	                if (func.equals("sqrt")) x = Math.sqrt(x);
-	                else if (func.equals("sin")) x = Math.sin(Math.toRadians(x));
-	                else if (func.equals("cos")) x = Math.cos(Math.toRadians(x));
-	                else if (func.equals("tan")) x = Math.tan(Math.toRadians(x));
-	                else throw new RuntimeException("Unknown function: " + func);
+	            } else if (isNumbers) {
+	                while (isNumbers) nextChar();
+	                result = changeToDouble(getSubString(mathExpression, startPos));
+	            } else if (isFunctions) {
+	                while (isFunctions) nextChar();
+	                String function = getSubString(mathExpression, startPos);
+	                result = parseFactor();
+	                if (function.equals("sqrt")) result = Math.sqrt(result);
+	                else if (function.equals("sin")) result = Math.sin(changeToRadians(result));
+	                else if (function.equals("cos")) result = Math.cos(changeToRadians(result));
+	                else if (function.equals("tan")) result = Math.tan(changeToRadians(result));
+	                else throw new RuntimeException("Unknown function: " + function);
 	            } else {
-	                throw new RuntimeException("Unexpected: " + (char)ch);
+	                throw new RuntimeException("Unexpected: " + (char)aChar);
 	            }
 
-	            if (eat('^')) x = Math.pow(x, parseFactor()); // exponentiation
+	            if (isExponentiation) result = getExponentiation(result); 
 
-	            return x;
+	            return result;
 	        }
+
+			private double changeToRadians(double result) {
+				return Math.toRadians(result);
+			}
+
+			private String getSubString(final String mathExpression, int startPos) {
+				return mathExpression.substring(startPos, this.position);
+			}
+
+			private double changeToDouble(final String Expression) {
+				return Double.parseDouble(Expression);
+			}
+
+			private double getExponentiation(double result) {
+				return Math.pow(result, parseFactor());
+			}
+
+			private void unexpectedCharError() {
+				throw new RuntimeException("Unexpected: " + (char)aChar);
+			}
 	    }.parse();
 	}
 	
