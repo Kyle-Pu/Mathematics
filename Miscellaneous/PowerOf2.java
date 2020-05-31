@@ -9,52 +9,83 @@ import java.util.Scanner;
 
 public class PowerOf2 {
   
-    /**
-     * This method checks if a number is power of 2.
-     * @param num is the number to be checked.
-     * @return the exponent if the number is power of 2 and -1 if not.
-     */
-    public static int isPower2(int num){
-        int c=0;
-        if(num==1)return 0;
-        if(num<1)return -1;
-        while(num>1){
-            if(num%2==1)return -1;
-            num/=2;
-            c++;
-         }
-        if(num==1)return c;
-        else return -1;
+    private static final int MINIMUM_NUMBER = 1;
+	private static final int NOTPOWER2 = -1;
+
+    public static int isPower2(int number){
+        if( lessThanMinimum(number) )
+        	return NOTPOWER2;
+        
+        return getPower(number);
     }
+    
+    private static int getPower(int number) {
+    	int result = 0;
+        while( number > MINIMUM_NUMBER ){
+            if( isOddNumber(number) )
+            	return NOTPOWER2;
+            number/=2;
+            result++;
+         }
+        if(number==1)
+        	return result;
+        else 
+        	return NOTPOWER2;
+        
+    }
+
+	private static boolean lessThanMinimum(int number) {
+		return number < MINIMUM_NUMBER;
+	}
+
+	private static boolean isOddNumber(int number) {
+		return number%2 == 1;
+	}
     
     public static void main (String[] args){
         try{
-            
-            Scanner scan =new Scanner(System.in);
-            
-            //Prompt user for a number
-            System.out.println("Give an integer number: ");
-            int num=scan.nextInt();
-            
-            if(num<0)throw(new InputMismatchException());
-            
-            int power=isPower2(num);
-            if (power==-1){
-                System.out.println(num+" is not power of 2.");
-            }
-            else
-            {
-                System.out.println(num +" is power of 2 and equals to 2^"+power+".");
-               
-            }
-            
+            printResult(getNumber());
         }
         
-        catch (InputMismatchException ex){
-             System.err.println("Please provide an integer number (no text, negative or real number). Restart the program and try again!");
-             main(new String[0]);
+        catch (InputMismatchException exception){
+             printErrorMessage();
+             restartProgram();
             
         }
     }
+
+	private static void printResult(int number) {
+		if (isPower2(number) == NOTPOWER2){
+		    System.out.println(number+" is not power of 2.");
+		}
+		else
+		{
+		    System.out.println(number +" is power of 2 and equals to 2^" + isPower2(number)+".");
+		   
+		}
+	}
+
+	private static int getNumber() {
+		Scanner scan =new Scanner(System.in);
+		
+		System.out.println("Give an integer number: ");
+		int number=scan.nextInt();
+		
+		checkNumber(number);
+		return number;
+	}
+
+	private static void checkNumber(int number) {
+		if(number<0)
+			throw(new InputMismatchException());
+	}
+
+	private static void printErrorMessage() {
+		System.err.println("Please provide an integer number (no text, negative or real number). Restart the program and try again!");
+	}
+
+	private static void restartProgram() {
+		main(new String[0]);
+	}
     
 }
