@@ -1,3 +1,5 @@
+package GUI;
+
 //dont mess with This :)
 
 import java.awt.*;
@@ -6,40 +8,46 @@ import javax.swing.*;
 
 public  class CalcThread extends Thread{
 
-		private CalcHandler handler;
+	private CalcHandler handler;
+	private final int ASECOND = 1000;
 
-		private double deltaTime = 0;
+	private double deltaTime = 0;
 
 
-		public CalcThread(CalcHandler handler){
-			this.handler = handler;
-		}
+	public CalcThread(CalcHandler handler){
+		this.handler = handler;
+	}
 
-		@Override
-		public void run(){
-			long lastTime = System.currentTimeMillis();
-			int count = 0;
-			int millCount = 0;
-			while(true){
-				if((System.currentTimeMillis() - 17 < lastTime)) continue;
-				deltaTime = (1.0 * System.currentTimeMillis()-lastTime)/1000;
-
-				handler.update();
-
-				count++;
-				millCount+=System.currentTimeMillis()-lastTime;
-				if(millCount >= 1000){
+	@Override
+	public void run(){
+		long lastTime = System.currentTimeMillis();
+		int count = 0;
+		int millCount = 0;
+		while(System.currentTimeMillis() - 17 < lastTime){
+			deltaTime = getDeltaTime(lastTime);
+			handler.update();
+			count++;
+			boolean LessThanASecond = getMillCount(lastTime, millCount) >= ASECOND;
+			if(LessThanASecond){
 					//System.out.println("60 Frames in: " + millCount + "ms");
 					//System.out.println("Count: " + count);
-					count = 0;
-					millCount = 0;
-				}
-				lastTime = System.currentTimeMillis();
+				count = 0;
+				millCount = 0;
 			}
+			lastTime = System.currentTimeMillis();
 		}
-
-		public double getDeltaTime(){
-			return deltaTime;
-		}
-
 	}
+
+	private int getMillCount(long lastTime, int millCount) {
+		millCount += System.currentTimeMillis()-lastTime;
+		return millCount;
+	}
+
+	private double getDeltaTime(long lastTime) {
+		return (1.0 * System.currentTimeMillis()-lastTime)/1000;
+	}
+
+	public double getDeltaTime(){
+		return deltaTime;
+	}
+}
