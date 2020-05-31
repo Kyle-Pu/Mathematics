@@ -23,33 +23,54 @@ public  class GraphPanel extends JPanel{
 		}
 		
 		@Override
-		//How we actually draw the points and lines
-		public void paintComponent(Graphics g){
+		public void paintComponent(Graphics graphics){
 			
-			//Get the mouse location and store x and y to mouseX and mouseY
-			PointerInfo a = MouseInfo.getPointerInfo();
-      			Point b = a.getLocation();
-      			int mouseX = (int) (b.getX());
-      			int mouseY = (int) (b.getY());
+      		Point currentPoint = getMouseLocation();
+      		int mouseX = (int) (currentPoint.getX());
+      		int mouseY = (int) (currentPoint.getY());
 
-			xOffset = (int)(mouseX-getLocationOnScreen().getX()); //Change location of the origin based on position of mouse
-			yOffset = (int)(mouseY-getLocationOnScreen().getY());;
+			changeOrigin(mouseX, mouseY);
     
-			//Create a graphics component
-			Graphics2D g2d = (Graphics2D) g;
+			Graphics2D graphics2d = (Graphics2D) graphics;
 			
-			g2d.setColor(Color.WHITE); //Set the paint color to white
-			g2d.fillRect(0, 0, this.getWidth(), this.getHeight()); //Clear out the screen with black
-			g2d.setColor(Color.BLUE); //Set paint color to blue
+			graphicsInitialize(graphics2d);
 			
-			for(Coordinate c: handler.getCoordinates()){  //For each coordinate in the coordinate list from the handler
-				double y = yOffset - (yScale * c.getY()); //Figure out where to put it on screen based on scale, offset and actual coordinate
-				g2d.fillRect((int)(c.getX() * xScale)+xOffset, (int)y, 5, 5);  //Draw a tiny rectangle for each point, w = 5, h = 5
+			for(Coordinate coordinate: handler.getCoordinates()){ 
+				double y = calculateY(coordinate);
+				drawRectangle(graphics2d, coordinate, y);
 			}
 			
-			g2d.drawLine(xOffset, this.getHeight(), xOffset, 0);  //Draw the x and y axis
-			g2d.drawLine(0, yOffset, this.getWidth(), yOffset);
+			drawAxisXY(graphics2d);
 
+		}
+
+		private void changeOrigin(int mouseX, int mouseY) {
+			xOffset = (int)(mouseX-getLocationOnScreen().getX()); 
+			yOffset = (int)(mouseY-getLocationOnScreen().getY());
+		}
+
+		private Point getMouseLocation() {
+			return MouseInfo.getPointerInfo().getLocation();
+		}
+
+		private void drawAxisXY(Graphics2D graphics2d) {
+			graphics2d.drawLine(xOffset, this.getHeight(), xOffset, 0); 
+			graphics2d.drawLine(0, yOffset, this.getWidth(), yOffset);
+		}
+
+		private double calculateY(Coordinate c) {
+			double y = yOffset - (yScale * c.getY()); //Figure out where to put it on screen based on scale, offset and actual coordinate
+			return y;
+		}
+
+		private void drawRectangle(Graphics2D graphics2d, Coordinate c, double y) {
+			graphics2d.fillRect((int)(c.getX() * xScale)+xOffset, (int)y, 5, 5);  //Draw a tiny rectangle for each point, w = 5, h = 5
+		}
+
+		private void graphicsInitialize(Graphics2D graphics2d) {
+			graphics2d.setColor(Color.WHITE); //Set the paint color to white
+			graphics2d.fillRect(0, 0, this.getWidth(), this.getHeight()); //Clear out the screen with black
+			graphics2d.setColor(Color.BLUE); //Set paint color to blue
 		}
 
 	}
