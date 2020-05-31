@@ -1,5 +1,7 @@
 public class GraphThread extends Thread {
 
+	private static final int MAX_TIME_DIFFERENCE = 17;
+
 	private GraphHandler handler;
 
 	private double deltaTime = 0;
@@ -12,27 +14,36 @@ public class GraphThread extends Thread {
 	//This happens repeatedly when the start function is called
 	public void run() {
 		
-		long lastTime = System.currentTimeMillis();
+		long lastTime = getCurrentTime();
 		int count = 0;
 		int millCount = 0;
 		while (true) {
-			if ((System.currentTimeMillis() - 17 < lastTime))
+			if ((getCurrentTime() - MAX_TIME_DIFFERENCE < lastTime))
 				continue;
-			deltaTime = (1.0 * System.currentTimeMillis() - lastTime) / 1000;
+			deltaTime = getDeltaTime(lastTime);
 
-			handler.update();
+			handler.updateGraphPanel();
 
 			count++;
-			millCount += System.currentTimeMillis() - lastTime;
-			if (millCount >= 1000) {
+			millCount += getCurrentTime() - lastTime;
+			boolean isMoreThan1Sec = millCount >= 1000;
+			if (isMoreThan1Sec) {
 				// System.out.println("60 Frames in: " + millCount + "ms");
 				// System.out.println("Count: " + count);
 				count = 0;
 				millCount = 0;
 			}
-			lastTime = System.currentTimeMillis();
+			lastTime = getCurrentTime();
 		}
 		
+	}
+
+	private double getDeltaTime(long lastTime) {
+		return (1.0 * getCurrentTime() - lastTime) / 1000;
+	}
+
+	private long getCurrentTime() {
+		return System.currentTimeMillis();
 	}
 
 	public double getDeltaTime() {
