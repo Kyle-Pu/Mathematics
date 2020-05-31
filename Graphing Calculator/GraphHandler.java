@@ -12,12 +12,12 @@ public class GraphHandler {
 	public GraphHandler() {
 		coordinates = new ArrayList<Coordinate>();
 		frame = new GraphFrame(this);
-		function();
+		graphingCalculator();
 		((Thread) (thread = new GraphThread(this))).start();
 	}
 
 	//Fills the coordinates ArrayList with points based on a function
-	public void function(){
+	public void graphingCalculator(){
 		
 		System.out.println(
 				"Welcome to our graphing calcalculator!");
@@ -49,32 +49,32 @@ public class GraphHandler {
 		for (double i = leftBound; i <= rightBound; i += step) {
 					String input = Double.toString(i); //Take the input at the given point based on left bound, right bound, and step of the function
 					revisedFormula = formula.replaceAll("x", "(" + input + ")"); //Take the original formula and replace all occurrences of 'x' with the input //Take the original formula and replace all occurrences of 'x' with the input
-					coordinates.add(new Coordinate(i, eval(revisedFormula))); // Add a new coordinate to the coordinates ArrayList with data points
+					coordinates.add(new Coordinate(i, evaluate(revisedFormula))); // Add a new coordinate to the coordinates ArrayList with data points
 			}
 		
-		scale(leftBound, rightBound);
+		getScale(leftBound, rightBound);
 		
 		}
 
 	
-	public void scale(double leftBound, double rightBound) {
+	public void getScale(double leftBound, double rightBound) {
 		getGraphFrame().getGraphPanel().setXScale(rightBound - leftBound + 20);
 	}
 	
 	
 	//The thread will run this update function which repaints the GraphPanel
-	public void update() {
+	public void updateGraphPanel() {
 		// Paint canvas
 		getGraphFrame().getGraphPanel().repaint();
 	}
 	
 	//Author: https://stackoverflow.com/questions/3422673/evaluating-a-math-expression-given-in-string-form
-		private static double eval(final String str) {
+		private static double evaluate(final String mathExpression) {
 		    return new Object() {
 		        int pos = -1, ch;
 
 		        void nextChar() {
-		            ch = (++pos < str.length()) ? str.charAt(pos) : -1;
+		            ch = (++pos < mathExpression.length()) ? mathExpression.charAt(pos) : -1;
 		        }
 
 		        boolean eat(int charToEat) {
@@ -89,7 +89,7 @@ public class GraphHandler {
 		        double parse() {
 		            nextChar();
 		            double x = parseExpression();
-		            if (pos < str.length()) throw new RuntimeException("Unexpected: " + (char)ch);
+		            if (pos < mathExpression.length()) throw new RuntimeException("Unexpected: " + (char)ch);
 		            return x;
 		        }
 
@@ -128,10 +128,10 @@ public class GraphHandler {
 		                eat(')');
 		            } else if ((ch >= '0' && ch <= '9') || ch == '.') { // numbers
 		                while ((ch >= '0' && ch <= '9') || ch == '.') nextChar();
-		                x = Double.parseDouble(str.substring(startPos, this.pos));
+		                x = Double.parseDouble(mathExpression.substring(startPos, this.pos));
 		            } else if (ch >= 'a' && ch <= 'z') { // functions
 		                while (ch >= 'a' && ch <= 'z') nextChar();
-		                String func = str.substring(startPos, this.pos);
+		                String func = mathExpression.substring(startPos, this.pos);
 		                x = parseFactor();
 		                if (func.equals("sqrt")) x = Math.sqrt(x);
 		                else if (func.equals("sin")) x = Math.sin(Math.toRadians(x));
