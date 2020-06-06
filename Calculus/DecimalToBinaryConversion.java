@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class DecimalToBinaryConversion {
+public class DecimalToBinaryConversion extends CalculusMain {
 	
     public static ArrayList<Integer> decimalToBinary(int decimal){
         ArrayList<Integer> binary =new ArrayList<>();
@@ -21,22 +21,22 @@ public class DecimalToBinaryConversion {
             System.out.print(i);
         System.out.println("");
     }
-    
-    public static void main(String[] args) {
- 
-    try{
-    	Scanner scan = new Scanner (System.in);
-    
+
+	@Override
+	protected void calculus() {
+		Scanner scan = new Scanner (System.in);
+	    
 	    System.out.println("Please input a decimal number to convert...");
 	    int numToConvert = scan.nextInt();
 	    ArrayList <Integer> convertedNum = decimalToBinary(numToConvert);
 	    System.out.print("Decimal number: "+numToConvert + " is equal to binary number: ");
 	    printBinary(convertedNum);
 	    scan.close();
-	 
-	    }catch(InputMismatchException ex){
-	      System.err.println("Please provide only numbers (no text). Restart the program and try again!");
-	      main(new String[0]);
-	    }
-    }   
+	}
+
+	@Override
+	protected void error() {
+		System.err.println("Please provide only numbers (no text). Restart the program and try again!");
+	    main(new String[0]);
+	}   
 }

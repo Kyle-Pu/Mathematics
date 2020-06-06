@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Savvas Theofilou
  * credits: @petridisa
  */
-public class BinaryToHexadecimalConversion {
+public class BinaryToHexadecimalConversion extends CalculusMain{
     
     /**
      * Checks if number is binary or contains leading zeros
@@ -100,28 +100,22 @@ public class BinaryToHexadecimalConversion {
      * Main method
      * @param args 
      */
-    public static void main(String[] args) {
-        Scanner scanner=new Scanner(System.in);
+	protected void error() {
+		System.err.println("Please provide a valid binary number. Restart the program and try again!");
+		main(new String[0]);
+	}
+
+	protected void calculus() {
+		Scanner scanner=new Scanner(System.in);
         String binaryNumber;
-        boolean restartProgram=false;
         
         System.out.print("Please input a binary number to convert: ");
         binaryNumber=scanner.next();
             
-        if (!binaryIsValid(binaryNumber)){
-            restartProgram=true;
-        }
-        else{
-            restartProgram=false;
+        if (binaryIsValid(binaryNumber)){
             binaryToHexadecimalConversion(binaryNumber);
         }
-        
-        if (restartProgram){
-            System.err.println("Please provide a valid binary number. Restart the program and try again!");
-            main(new String[0]);
-        }
-        
-    }
+	}
 
 	private static void binaryToHexadecimalConversion(String binaryNumber) {
 		String hexNumber = null;

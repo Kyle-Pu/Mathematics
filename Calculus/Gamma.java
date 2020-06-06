@@ -2,7 +2,7 @@ package Calculus;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Gamma {
+public class Gamma extends CalculusMain{
 	private static Scanner sc = new Scanner(System.in);
 	static double logGamma(double x) {
 		double tmp = (x - 0.5) * Math.log(x + 4.5) - (x + 4.5);
@@ -13,17 +13,11 @@ public class Gamma {
 	}
 	static double gamma(double x) { return Math.exp(logGamma(x)); }
 
-	public static void main(String[] args) {
-		try {
-  		 	while (true) {
-  		 		getGamma();
-  		 	}
-  	 	} catch (InputMismatchException ime) {
-  		 sc.close();
+	protected void error() {
+		sc.close();
   		 System.exit(0);
-  	 	}
-  	 }
-	private static void getGamma() {
+	}
+	protected void calculus() {
 		System.out.print("Introduce a number: ");
 		double x = sc.nextDouble();
 		System.out.println("Gamma(" + x + ") = " + gamma(x));
