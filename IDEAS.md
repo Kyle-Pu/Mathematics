@@ -14,7 +14,6 @@ After completing the program, please be sure to remove the appropriate item from
 ## Trigonometry
 - Law of Sines
 - Law of Cosines
-- Coterminal angles (check if a given angle is coterminal with another angle)
 ## Calculus
  - Mean Value Theorem
  - Extreme Value Theorem
