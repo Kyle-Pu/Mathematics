@@ -15,7 +15,7 @@ Hi! Thanks for choosing to contribute to our math repository here on GitHub! Fee
 ## Explanation Files for Programs
  - Each program should come with an explanation README File
  - For each program, create a README.md file named [program name]Explanation.md that explains the math concept along with an example problem. 
- - Each explanation file should also come with a **guide on how to use the program.** Refer to https://github.com/Kyle-P/Mathematics/blob/master/Algebra/SlopeOfALineExplanation.md for a great example.
+ - Each explanation file should also come with a **guide on how to use the program.** Refer to https://github.com/Kyle-Pu/Mathematics/blob/master/Algebra/Slope/SlopeOfALineExplanation.md for a great example.
  - After the explanation files mentioned above are generated, combine the info from the file with the actual program. It might be helpful to put yourself in the user's position and ask yourself if you would understand how the answer was computed based on what the program is outputting. This explanation should be completely optional (on the user's side). First, prompt the user whether or not they would like to see an explanation. If yes, then display the appropriate explanation for the problem.
  
  
