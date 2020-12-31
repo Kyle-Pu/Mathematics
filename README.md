@@ -1,8 +1,6 @@
 # Mathematics
 Creating a HUGE math library coded in Java! Great for both new and experienced developers. All math levels are welcome!!!
 
-# NOTICE: THIS REPO IS NO LONGER UNDER ACTIVE MODERATION AS OF JULY 14TH, 2020
-
 [![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
 Feel free to subscribe to our contribution stream on CodeTriage!
 
