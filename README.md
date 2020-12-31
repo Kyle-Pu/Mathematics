@@ -6,6 +6,21 @@ Feel free to subscribe to our contribution stream on CodeTriage!
 
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
 
+## Plan of Action and Goals
+After a long break, this repo is coming back into active status once again!
+
+We aim to build this repo out as an easy way for people to get into the open source community on a broad project open to any and all math programs!
+
+***We're beginning to add opportunities to write programs in C++ and Python so we can reach more people.***
+
+Please feel free to reach out on our Gitter chat above!
+
+## Who Can Contribute
+Anyone! We're really looking for people of all experience levels to come and write some programs.
+
+Some more advanced sub-projects include the GUI and the Graphing Calculator applications.
+
+
 ## Details
 The purpose of this app is to assist students with understanding math formulas. Some calculators compute a specific type of calculation for the user and also explain why the answer is what it is.
 
