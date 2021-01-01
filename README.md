@@ -1,5 +1,5 @@
 # Mathematics
-Creating a HUGE math library coded in Java! Great for both new and experienced developers. All math levels are welcome!!!
+Creating a HUGE math library coded in Java, C++, and Python! Great for both new and experienced developers. All math levels are welcome!!!
 
 [![Open Source Helpers](https://www.codetriage.com/kyle-p/mathematics/badges/users.svg)](https://www.codetriage.com/kyle-p/mathematics)
 Feel free to subscribe to our contribution stream on CodeTriage!
@@ -11,7 +11,7 @@ After a long break, this repo is coming back into active status once again!
 
 We aim to build this repo out as an easy way for people to get into the open source community on a broad project open to any and all math programs!
 
-***We're beginning to add opportunities to write programs in C++ and Python so we can reach more people.***
+***We're beginning to add  programs in C++ and Python so we can reach more people.***
 
 Please feel free to reach out on our Gitter chat above!
 
