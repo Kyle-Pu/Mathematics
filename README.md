@@ -6,7 +6,7 @@ Feel free to subscribe to our contribution stream on CodeTriage!
 
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
 
-## Plan of Action and Goals
+## Welcome! Plan of Action & Goals
 After a long break, this repo is coming back into active status once again!
 
 We aim to build this repo out as an easy way for people to get into the open source community on a broad project open to any and all math programs!
