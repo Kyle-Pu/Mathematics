@@ -6,6 +6,8 @@ Feel free to subscribe to our contribution stream on CodeTriage!
 
 [![Join the chat at https://gitter.im/Kyle-P-Mathematics/Lobby](https://badges.gitter.im/Kyle-P-Mathematics/Lobby.svg)](https://gitter.im/Kyle-P-Mathematics/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) The official chat room for the repo!
 
+[![Gitter](https://badges.gitter.im/Kyle-P-Mathematics/GUI.svg)](https://gitter.im/Kyle-P-Mathematics/GUI?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge) The official chat room for work on the GUI!
+
 ## Welcome! Plan of Action & Goals
 After a long break, this repo is coming back into active status once again!
 
