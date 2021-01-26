@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Algebra/Factors"/>
+	<classpathentry kind="src" path="Algebra/Intercepts"/>
+	<classpathentry kind="src" path="Algebra/Prime Factors"/>
+	<classpathentry kind="src" path="Algebra/Quadratic Formula"/>
+	<classpathentry kind="src" path="Algebra/Slope"/>
+	<classpathentry excluding="Factors/|Intercepts/|Prime Factors/|Quadratic Formula/|Slope/" kind="src" path="Algebra"/>
+	<classpathentry kind="src" path="Calculus/Limits"/>
+	<classpathentry kind="src" path="Calculus/Theorems"/>
+	<classpathentry kind="src" path="Geometry/Area"/>
+	<classpathentry kind="src" path="Geometry/Distance"/>
+	<classpathentry kind="src" path="Geometry/Heron"/>
+	<classpathentry kind="src" path="Geometry/Pythagorean Theorem"/>
+	<classpathentry kind="src" path="Geometry/Volume"/>
+	<classpathentry kind="src" path="Graphing Calculator"/>
+	<classpathentry kind="src" path="Gui"/>
+	<classpathentry kind="src" path="Trigonometry/Basic Functions"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
