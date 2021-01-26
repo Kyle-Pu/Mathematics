@@ -26,4 +26,20 @@ Let the sides of the triangle be 4.0, 13.0 and 15.0
 
 ![fifth equation](http://latex.codecogs.com/png.latex?%5Cinline%20%3D24)
 
-  For more information visit: https://en.wikipedia.org/wiki/Heron%27s_formula
+## Using Our Program:
+
+The program will first ask you for the length of the first side of the triangle. It will
+accept both decimals and whole numbers as an input, but it will not allow fractions. The
+program will then repeat this step two more times. It will ask for the length of the 
+second side of the triangle, then for the length of the third side of the triangle. The 
+same rules apply for providing side lengths here, so decimals or whole numbers, but no
+fractions.
+
+After you have provided these three side lengths, the program will use Heron's Area Forumula
+to calculate the area of the given triangle. If the sides do not make a valid triangle, then 
+the program will either output an area of 0.0, or NaN (not a number).
+
+
+## Further Reading:
+
+For more information visit: https://en.wikipedia.org/wiki/Heron%27s_formula

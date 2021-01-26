@@ -3,13 +3,9 @@ Feel free to contribute! Always happy to receive new contributions. Please remem
 
 After completing the program, please be sure to remove the appropriate item from the list below!
 ## Algebra
-- Find the intercepts of a line
-- Prime Factorization
-- Findind the nearest integer to the square root of a number
 ## Geometry
 - Area of squares, triangles, rectangles, etc.
 - Volume of spheres, cylinders, etc.
-- Distance between 3-dimensional coordinates
 - Angle measures (both interior and exterior) based on how many sides a shape has
 - Pythagorean Triples
 - Find missing sides of special triangles
@@ -17,7 +13,6 @@ After completing the program, please be sure to remove the appropriate item from
 ## Trigonometry
 - Law of Sines
 - Law of Cosines
-- Coterminal angles (check if a given angle is coterminal with another angle)
 ## Calculus
  - Mean Value Theorem
  - Extreme Value Theorem
@@ -26,5 +21,3 @@ After completing the program, please be sure to remove the appropriate item from
  - Riemann Sums
  - Integration
  - Differentiation
- - Gamma Function Calculation
- 

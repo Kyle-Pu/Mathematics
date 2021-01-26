@@ -11,13 +11,13 @@ public class Heron{
 		Scanner scan = new Scanner(System.in);
 
     //Prompt user for side lengths and store values
-		System.out.print("What is the length of side 1?");
+		System.out.print("What is the length of side 1? ");
 		double a = scan.nextDouble();
 
 		System.out.print("What is the length of side 2? ");
 		double b = scan.nextDouble();
 
-		System.out.print("What is the length of side 3?");
+		System.out.print("What is the length of side 3? ");
 		double c = scan.nextDouble();
 
 		System.out.println("Calculating...");
