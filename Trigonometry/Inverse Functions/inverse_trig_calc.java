@@ -5,14 +5,14 @@ public class inverse_trig_calc {
     public static void main(String[] args) {
 
         System.out.println("Welcome to the trigonometry calculator!");
-        System.out.println("\nThis is the inverese trigonometry calculator");
+        System.out.println("\nThis is the inverse trigonometry calculator");
         Scanner scan = new Scanner(System.in);
 
         //Prompt user for which trigonometry function
-        System.out.println("What inverse trigonometry function do you want to use? :"
+        System.out.println("Which inverse trigonometry function do you want to use? :"
                 + "\n 1 Cotangent"
                 + "\n 2 Secant"
-                + "\n 3 Cosec"
+                + "\n 3 Cosecant"
                 + "\n 4 Coth"
                 + "\n 5 Sech"
                 + "\n 6 Cosech"
